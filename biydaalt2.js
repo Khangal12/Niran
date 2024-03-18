@@ -10,7 +10,7 @@ function salary() {
     let z = parseFloat(document.getElementById('inp').value);
 
     if (x <= 6000000) {
-        document.getElementById("garalt_5").innerHTML =  + 20000;
+        documen.getElementById("garalt_5").innerHTML =  + 20000;
 
     } else if (x >= 6000001, x <= 12000000) {
         document.getElementById("garalt_5").innerHTML =  + 18000;
