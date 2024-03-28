@@ -2,146 +2,201 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta 
-    name="viewport" 
-    content="width=device-width, initial-scale=1.0" 
-    />
-    <meta
-    name="description"
-    content="Niran Makeup site">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Niran Makeup site" />
     <title>Niran</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  
+
   <body>
     <header>
       <div class="header-search flexrow">
-       <a href="main.html"> <img class="header-logo" src="assets/logo.jpg" alt="niran" width="100" height="60" /></a> 
+        <a href="main.html">
+          <img
+            class="header-logo"
+            src="assets/logo.jpg"
+            alt="niran"
+            width="100"
+            height="60"
+        /></a>
         <div class="search flexrow">
           <p>Search Bar</p>
           <icon class="icon-search"></icon>
         </div>
-        <a class="login" href="login.html">
-          <icon class="login-icon"></icon></a>
+        <a href="login.html"><i class="fa-regular fa-user"></i></a>
       </div>
-      <nav>
-        <menu>
-     <ul class="nav-li">
-     <li>All
-      <ul class="nav-li-inside">
-        <li >Артист мэдээлэл</li>
-        <li>Цаг авах</li>
-        <li>Хэрэглэгчийн сэтгэгдэл</li>
-        <li>Нүүр хуудас</li>
-        <li>Хаяг байршил</li>
-        <li>Холбоо барих</li>
-        <li><img src="assets/logo.jpg" height="60" width="100"></li>
-      </ul>
-     </li>
-     <li>Artist</li>
-     <li>Make-up</li>
-     <li>Order</li>
-     </ul>
-    </menu>
-    </nav>
+      <div class="line"></div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="main.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Makeup <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-content">
+              <li><a href="makeup.html">Гоёлын будалт</a></li>
+              <li><a href="makeup.html">Хуримын будалт</a></li>
+              <li><a href="makeup.html">Тайз дэлгэцийн будалт</a></li>
+              <li><a href="makeup.html">Энгийн будалт</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Artists<i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-content">
+              <li><a href="artist.html">Топ артист</a></li>
+              <li><a href="makeup.html">Будалтууд</a></li>
+              <li><a href="artist.html">Артистын мэдээлэл</a></li>
+              <li><a href="artist.html"> Хэрэглэгчийн сэтгэгдэл</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="order.html" class="order-button">Захиалга</a>
+      </nav>
     </header>
     <main>
-    <section class="mainImage">
-      <img src="assets/main.jpg" alt="Niran" />
-    </section>
-    <section class="artistImage">
-      <button id="mainArtist">Артист мэдээлэл</button>
-      <img src="" alt="Niran" />
-    </section>
-    <section class="mainComment">
-      <h1>Хэрэглэгчийн сэтгэгдэл</h1>
-      <h2>
-        Бид зөвхөн хэрэглэгчдийнхээ арьсны онцлогт тохирсон бүтээгдэхүүнээр
-        үйлчилж тэдний сэтгэл ханамжийг ямагт эрхэмлэдэг.
-      </h2>
-      <section class="comments flexrow">
-        <article class="comment">
-          <img src="" alt="niran" class="userImg" />
-          <section class="userName">
-            <p>@coco_buyan</p>
-            <p>Artist Ganjaa</p>
-            <i class="star"></i>
-          </section>
-          
-          <section class="userComment">
-            <p>
-              Lorem ipsum dolor sit ameght consectetur adipisicing elit. Quia
-              ipsum dicta dolor incidunt temporibus voluptas eos quam quas
-              dolorum. Adipisci, maxime repellendus accusamus aliquid earum est
-              debitis hic corporis incidunt?
-            </p>
-          </section>
-        </article>
-        <article class="comment">
-          <img src="" alt="niran" class="userImg" />
-          <section class="userName">
-            <p>@coco_buyan</p>
-            <p>Artist Ganjaa</p>
-            <i class="star"></i>
-          </section>
-          <section class="userComment">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-              ipsum dicta dolor incidunt temporibus voluptas eos quam quas
-              dolorum. Adipisci, maxime repellendus accusamus aliquid earum est
-              debitis hic corporis incidunt?
-            </p>
-          </section>
-        </article>
+      <div class="mainImg"><img src="assets/main.jpg" /></div>
+      <section class="artistImage">
+        <button id="mainArtist">Артист мэдээлэл</button>
+        <i class="fa-solid fa-angle-left"></i>
+        <i class="fa-solid fa-angle-right"></i>
       </section>
-    </section>
-    <section class="company flexrow">
-      <div class="flexcol">
-        <img src="assets/company1.jpeg" alt="niran" />
-        <img src="assets/company1.jpeg" alt="niran" />
+
+      <section class="mainComment">
+        <h2>Хэрэглэгчийн сэтгэгдэл</h2>
+        <h3>
+          Бид зөвхөн хэрэглэгчдийнхээ арьсны онцлогт тохирсон бүтээгдэхүүнээр
+          үйлчилж тэдний сэтгэл ханамжийг ямагт эрхэмлэдэг.
+        </h3>
+        <section class="comments flexrow">
+          <i class="fa-solid fa-angle-left"></i>
+
+          <article class="comment">
+            <div class="flexrow">
+              <img src="assets/budalt (9).png" alt="niran" class="userImg" />
+              <div class="userName">
+                <p>@coco_buyan</p>
+                <h3>Artist Ganjaa</h3>
+                <div class="star">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <section class="userComment">
+              <p>
+                Lorem ipsum dolor sit ameght consectetur adipisicing elit. Quia
+                ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+                dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+                est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
+                consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
+                temporibus voluptas eos quam quas dolorum. Adipisci, maxime
+                repellendus accusamus aliquid earum est debitis hic corporis
+                incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
+                elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
+                quam quas dolorum. Adipisci, maxime repellendus accusamus
+                aliquid earum est debitis hic corporis incidunt? Lorem ipsum
+                dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
+                dolor incidunt temporibus voluptas eos quam quas dolorum.
+                Adipisci, maxime repellendus accusamus aliquid earum est debitis
+                hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                quid earum est debitis hic corporis incidunt?
+              </p>
+            </section>
+          </article>
+          <article class="comment">
+            <div class="flexrow">
+              <img src="assets/budalt (9).png" alt="niran" class="userImg" />
+              <div class="userName">
+                <p>@coco_buyan</p>
+                <h3>Artist Ganjaa</h3>
+                <div class="star">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <section class="userComment">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+                dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+                est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
+                consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
+                temporibus voluptas eos quam quas dolorum. Adipisci, maxime
+                repellendus accusamus aliquid earum est debitis hic corporis
+                incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
+                elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
+                quam quas dolorum. Adipisci, maxime repellendus accusamus
+                aliquid earum est debitis hic corporis incidunt? Lorem ipsum
+                dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
+                dolor incidunt temporibus voluptas eos quam quas dolorum.
+                Adipisci, maxime repellendus accusamus aliquid earum est debitis
+                hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                adipisiem ipsum dolor sit ameght consectetur
+              </p>
+            </section>
+          </article>
+          <i class="fa-solid fa-angle-right"></i>
+        </section>
+      </section>
+      <section class="company flexrow">
+        <div class="flexcol">
+          <img src="assets/company1.jpeg" alt="niran" />
+          <img src="assets/company1.jpeg" alt="niran" />
+        </div>
+        <div class="flexcol">
+          <img src="assets/company2.jpeg" alt="niran" />
+          <img src="assets/company2.jpeg" alt="niran" />
+        </div>
+      </section>
+    </main>
+    <footer class="flexrow">
+      <section class="footerContact">
+        <img src="assets/logo.jpg" alt="Niran" width="100" height="70" />
+        <h3>Холбоо барих</h3>
+        <div class="footerpara flexrow">
+          <i class="fa-solid fa-phone"></i>
+          <p>+976-89552569</p>
+        </div>
+        <div class="footerpara flexrow">
+          <i class="fa-solid fa-square-envelope"></i>
+          <p>info@niranmakeup.mn</p>
+        </div>
+        <div class="footerpara flexrow">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Улаанбаатар, Хан-уул дүүрэг, Сүмбэр таур, 4 давхар</p>
+        </div>
+      </section>
+      <section class="help">
+        <h3>ТУСЛАМЖ & МЭДЭЭЛЭЛ</h3>
+        <p>Түгээмэл асуулт хариулт</p>
+        <p>Үйлчилгээний нөхцөл</p>
+        <p>Холбоо барих</p>
+      </section>
+      <div class="footer-logo">
+        <div class="footer-col flexrow">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="footer-col flexrow">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
       </div>
-      <div class="flexcol">
-        <img src="assets/company2.jpeg" alt="niran" />
-        <img src="assets/company2.jpeg" alt="niran" />
-      </div>
-    </section>
-  </main>
-  <footer>
-    <section class="footerContact flexcol">
-      <img src="assets/logo.jpg" alt="Niran" width="100" height="70" />
-      <h3>Холбоо барих</h3>
-      <div class="footerpara flexrow">
-        <i class="phone-icon"></i>
-        <p>+976-89552569</p>
-      </div>
-      <div class="footerpara flexrow">
-        <i class="mail-icon"></i>
-        <p>info@niranmakeup.mn</p>
-      </div>
-      <div class="footerpara flexrow">
-        <i class="address-icon"></i>
-        <p>Улаанбаатар, Хан-уул дүүрэг, Сүмбэр таур, 4 давхар</p>
-      </div>
-    </section>
-    <section class="help">
-      <h3>ТУСЛАМЖ & МЭДЭЭЛЭЛ</h3>
-      <p>Түгээмэл асуулт хариулт</p>
-      <p>Үйлчилгээний нөхцөл</p>
-      <p>Холбоо барих</p>
-  </section>
-  <div class="footer-logo">
-  <div class="flexrow">
-      <i class="fa"></i>
-      <i class="insta"></i>
-      <i class="ln"></i>
-  </div>
-  <div class="flexrow">
-      <i class="fa"></i>
-      <i class="insta"></i>
-      <i class="ln"></i>
-  </div>
-  </div>
-  </footer>
+    </footer>
   </body>
-  
 </html>
