@@ -357,8 +357,7 @@ footer > * {
 }
 /*-----------------------------makeup.html-------------------------------*/
 /*aside*/
-/* Style the custom dropdown button */
-/* Style the custom dropdown button */
+
 .sidebar {
   width: 150px;
   background-color: var(--color-bg);
@@ -382,14 +381,31 @@ footer > * {
   text-align: left;
   border: none;
   cursor: pointer;
+  display: flex;
 }
-
+.custom-dropbtn i {
+  margin: 5px 0 0 3px;
+}
+.custom-menu li {
+  margin-top: 100px;
+}
+.custom-dropbtn:hover {
+  color: var(--color-footer-bg);
+}
+.custom-menu li:first-child {
+  margin-top: 0;
+}
 .custom-dropdown-content {
   display: none;
   position: absolute;
-  background-color: #fff;
+  background-color: var(--color-bg);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  list-style: none;
+  font-size: var(--font-regular);
+}
+.custom-dropdown-content li {
+  margin-top: 0;
 }
 
 .custom-dropdown-content a {
@@ -398,14 +414,15 @@ footer > * {
   color: black;
   text-decoration: none;
 }
-
 .custom-dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: var(--color-comment);
+  color: var(--color-footer-bg);
 }
 
 .custom-dropdown:hover .custom-dropdown-content {
   display: block;
 }
+/*main*/
 .main-makeup {
   display: flex;
   flex-direction: row;
@@ -416,6 +433,7 @@ footer > * {
 .small-main-makeup {
   width: 100%;
   max-width: 1450px;
+  margin-left: 40px;
 }
 .makeupPic {
   width: fit-content;
