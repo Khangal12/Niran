@@ -10,24 +10,42 @@
     name="description"
     content="Niran Makeup site">
     <title>Niran</title>
+    <link rel="stylesheet" href="main.css">
   </head>
-  <header>
-    <section>
-     <a href="main.html"> <img src="assets/logo.jpg" alt="niran" /></a> 
-      <div class="search flexrow">
-        <p>Search Bar</p>
-        <i class="search-icon"></i>
-        <a class="login" href="login.html"><i class="login-icon"></i></a>
-      </div>
-    </section>
-    <section>
-      <a href="main.html" class="all">Бүгд</a>
-      <a href="artist.html" class="artist">Artist</a>
-      <a href="makeup.html" class="makeup">Make-Up</a>
-      <a href="order.html" class="orderButton">Захиалга өгөх</a>
-    </section>
-  </header>
+  
   <body>
+    <header>
+      <div class="header-search flexrow">
+       <a href="main.html"> <img class="header-logo" src="assets/logo.jpg" alt="niran" width="100" height="60" /></a> 
+        <div class="search flexrow">
+          <p>Search Bar</p>
+          <icon class="icon-search"></icon>
+        </div>
+        <a class="login" href="login.html">
+          <icon class="login-icon"></icon></a>
+      </div>
+      <nav>
+        <menu>
+     <ul class="nav-li">
+     <li>All
+      <ul class="nav-li-inside">
+        <li >Артист мэдээлэл</li>
+        <li>Цаг авах</li>
+        <li>Хэрэглэгчийн сэтгэгдэл</li>
+        <li>Нүүр хуудас</li>
+        <li>Хаяг байршил</li>
+        <li>Холбоо барих</li>
+        <li><img src="assets/logo.jpg" height="60" width="100"></li>
+      </ul>
+     </li>
+     <li>Artist</li>
+     <li>Make-up</li>
+     <li>Order</li>
+     </ul>
+    </menu>
+    </nav>
+    </header>
+    <main>
     <section class="mainImage">
       <img src="assets/main.jpg" alt="Niran" />
     </section>
@@ -49,6 +67,7 @@
             <p>Artist Ganjaa</p>
             <i class="star"></i>
           </section>
+          
           <section class="userComment">
             <p>
               Lorem ipsum dolor sit ameght consectetur adipisicing elit. Quia
@@ -86,10 +105,10 @@
         <img src="assets/company2.jpeg" alt="niran" />
       </div>
     </section>
-  </body>
+  </main>
   <footer>
     <section class="footerContact flexcol">
-      <img src="assets/logo.jpg" alt="Niran" />
+      <img src="assets/logo.jpg" alt="Niran" width="100" height="70" />
       <h3>Холбоо барих</h3>
       <div class="footerpara flexrow">
         <i class="phone-icon"></i>
@@ -110,17 +129,19 @@
       <p>Үйлчилгээний нөхцөл</p>
       <p>Холбоо барих</p>
   </section>
-  <section class="footer-logo">
-  <section class="flexrow">
+  <div class="footer-logo">
+  <div class="flexrow">
       <i class="fa"></i>
       <i class="insta"></i>
       <i class="ln"></i>
-  </section>
-  <section class="flexrow">
+  </div>
+  <div class="flexrow">
       <i class="fa"></i>
       <i class="insta"></i>
       <i class="ln"></i>
-  </section>
-  </section>
+  </div>
+  </div>
   </footer>
+  </body>
+  
 </html>
