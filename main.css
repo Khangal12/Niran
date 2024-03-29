@@ -1,3 +1,4 @@
+@import url(assets/main.svg);
 :root {
   --color-bg: #faecf7;
   --color-footer-bg: #faa8e8;
@@ -9,6 +10,8 @@
   --font-small: 12px;
   --font-big: 20px;
   --font-btn: 25px;
+  --image-border-radius:100px;
+  --logo-border-radius:20px;
 }
 
 body {
@@ -80,7 +83,7 @@ header {
 }
 
 .header-logo {
-  border-radius: 20px;
+  border-radius: var(--logo-border-radius);
 }
 
 .header-search {
@@ -93,7 +96,7 @@ header {
   align-items: center;
   width: 800px;
   height: 46px;
-  border-radius: 30px;
+  border-radius: var(--logo-border-radius);
   border: 1px solid black;
   background-color: var(--color-search-bar);
 }
@@ -130,7 +133,7 @@ i.fa-user {
   background-color: var(--color-bg);
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 30px;
+  border-radius: var(--logo-border-radius);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -210,10 +213,12 @@ main {
   grid-area: main;
   padding: 20px 0 20px 0;
 }
-
+.mainImg{
+    background-color: var(--color-main-bg);
+}
 .mainImg img {
-  width: 100%;
-  height: 800px;
+   width: 100%;
+  height:600px;
 }
 
 .artistImage {
@@ -327,6 +332,11 @@ footer > * {
   margin: 0 5%;
 }
 
+
+.footerpara:hover i , .footerpara:hover p {
+    text-decoration: underline;
+    color: black;
+}
 .footerContact,
 .help,
 .footer-logo {
@@ -458,5 +468,5 @@ footer > * {
 .makeupPic img:hover {
   width: 350px;
   height: 350px;
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
 }
