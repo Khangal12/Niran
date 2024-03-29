@@ -464,8 +464,10 @@ footer > * {
 .makeupPic:last-child {
   margin-right: 0;
 }
+.makeupPic img{
+    transition: all 0.3s ease;
+}
 .makeupPic img:hover {
   width: 350px;
   height: 350px;
-  transition: all 0.3s ease-in;
-}
+  }
