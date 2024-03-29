@@ -23,7 +23,7 @@ body {
     "main"
     "footer";
   width: 100%;
-  max-width: 1600px;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: var(--color-bg);
 }
@@ -370,6 +370,7 @@ footer > * {
 .sidebar {
   width: 150px;
   background-color: var(--color-bg);
+
 }
 
 .custom-menu {
@@ -432,42 +433,50 @@ footer > * {
   display: block;
 }
 /*main*/
+main{
+    grid-area: main;
+}
 .main-makeup {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 8%;
+  justify-content: center;
+  column-gap: 30px;
 }
 .small-main-makeup {
-  width: 100%;
-  max-width: 1450px;
-  margin-left: 40px;
-}
-.makeupPic {
-  width: fit-content;
-}
-.makeupPic img {
-  width: 310px;
-  height: 310px;
-  border-radius: 200px;
-}
-.makeupPic {
-  margin-right: 5%;
-  margin-top: 10px;
-  margin-bottom: 2%;
-  text-align: center;
-}
-.makeupPic p {
-  margin-top: 10px;
-}
-.makeupPic:last-child {
-  margin-right: 0;
-}
-.makeupPic img{
-    transition: all 0.3s ease;
-}
-.makeupPic img:hover {
-  width: 350px;
-  height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 50px;
+   
   }
+  
+  .makeupPic {
+    width: fit-content;
+    text-align: center;
+  }
+  
+  .makeupPic img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%; /* Adjusted to create a circle */
+  }
+  
+  .item {
+    grid-area: span 3;
+  }
+  
+  .item1 {
+    grid-area: span 3;
+  }
+  
+  .makeupPic p {
+    margin-top: 10px;
+  }
+  .makeupPic img {
+    transition: all 0.3s ease;
+  }
+  
+  /* .makeupPic:hover img { /* Changed to .makeupPic:hover img for hover effect */
+    width: 310px;
+    height: 310px;
+  }
+   */
