@@ -1,4 +1,5 @@
 @import url(assets/main.svg);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
   --color-bg: #faecf7;
   --color-footer-bg: #faa8e8;
@@ -6,12 +7,12 @@
   --color-logo: #fdfdff;
   --color-main-bg: #250b14;
   --color-comment: #f5e3ea;
-  --font-regular: 16px;
-  --font-small: 12px;
-  --font-big: 20px;
+  --font-regular: 20px;
+  --font-small: 16px;
+  --font-big: 30px;
   --font-btn: 25px;
   --image-border-radius:100px;
-  --logo-border-radius:20px;
+  --logo-border-radius:30px;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   background-color: var(--color-bg);
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -49,12 +51,12 @@ h1 {
 
 h2 {
   font-size: var(--font-big);
-  font-weight: 800;
+  font-weight: 600;
 }
 
 h3 {
   font-size: var(--font-regular);
-  font-weight: 600;
+  font-weight: 500;
 }
 /* Changing the width and height of icons */
 i.fa-angle-left,
@@ -133,7 +135,7 @@ i.fa-user {
   background-color: var(--color-bg);
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: var(--logo-border-radius);
+  border-radius: var(--image-border-radius);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -141,7 +143,7 @@ i.fa-user {
 }
 
 .navbar .logo {
-  font-size: 30px;
+  
   font-weight: bold;
   text-decoration: none;
   color: #333;
@@ -166,7 +168,7 @@ i.fa-user {
 .navbar .nav-links li a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
+  font-size: var(--font-regular);
   transition: color 0.3s ease;
 }
 
@@ -200,6 +202,7 @@ i.fa-user {
   color: black;
   text-decoration: none;
   border-radius: 30px;
+  font-size: var(--font-regular);
   transition: background-color 0.3s ease;
 }
 
@@ -475,8 +478,7 @@ main{
     transition: all 0.3s ease;
   }
   
-  /* .makeupPic:hover img { /* Changed to .makeupPic:hover img for hover effect */
-    width: 310px;
-    height: 310px;
+  .makeupPic:hover img { /* Changed to .makeupPic:hover img for hover effect */
+    scale: 1.05;
+
   }
-   */
