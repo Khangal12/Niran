@@ -15,29 +15,26 @@
       referrerpolicy="no-referrer"
     />
 </head>
-<body>
-  <header>
+<header>
     <div class="header-search flexrow">
       <a href="main.html">
-        <img
-          class="header-logo"
+        <img class="header-logo"
           src="assets/logo.jpg"
           alt="niran"
           width="100"
-          height="60"
-      /></a>
+          height="60"/></a>
       <div class="search flexrow">
-        <p>Search Bar</p>
-        <icon class="icon-search"></icon>
+        <form class="search"> <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="search">      
+        <i href="login.html"><i class="fa-regular fa-user"></i></i>  
       </div>
-      <a href="login.html"><i class="fa-regular fa-user"></i></a>
     </div>
-    <div class="line"></div>
+    <hr>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="main.html">Home</a></li>
+        <li><a href="main.html">Home</a><img src="assets/gloss.png"  width="90px" height="50px" alt="high"></li>
         <li class="dropdown">
-          <a href="#">Makeup <i class="fas fa-chevron-down"></i></a>
+          <a href="#"> Makeup <i class="fas fa-chevron-down"></i><img src="assets/gloss.png" width="90px" height="50px" alt="high"></a>
           <ul class="dropdown-content">
             <li><a href="makeup.html">Гоёлын будалт</a></li>
             <li><a href="makeup.html">Хуримын будалт</a></li>
@@ -46,7 +43,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#">Artists<i class="fas fa-chevron-down"></i></a>
+          <a href="artist.html">Artists<i class="fas fa-chevron-down"></i><img src="assets/gloss.png" width="90px" height="50px" alt="high"></a>
           <ul class="dropdown-content">
             <li><a href="artist.html">Топ артист</a></li>
             <li><a href="makeup.html">Будалтууд</a></li>
@@ -54,14 +51,16 @@
             <li><a href="artist.html"> Хэрэглэгчийн сэтгэгдэл</a></li>
           </ul>
         </li>
+        <li><a href="order.html" class="order-button">Захиалга өгөх</a><img src="assets/gloss.png" width="90px" height="50px" alt="high"></li>
       </ul>
-      <a href="order.html" class="order-button">Захиалга</a>
+      <hr>
     </nav>
-  </header>
+</header>
+<body>
   <main>
     <section>
       <article class="artist">
-        <img src="assets/budalt-.png" width="200" height="200" alt="budalt"/>
+       <img src="assets/budalt-.png" width="200" height="200" alt="budalt"/>
       </article>
       <article class="inf">
         <h2>Артист Пүүжээ</h2>
