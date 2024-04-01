@@ -76,18 +76,9 @@ h3 {
     font-size: var(--font-regular);
     font-weight: 500;
 }
-
-.flexrow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.flexcol {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+p{
+    font-size: 25px;
+    gap: 10px;
 }
 
 /* Header */
@@ -249,22 +240,14 @@ i.fa-user {
 
 }
 
-.info {
-    display: flex;
 
+.inf{
+margin-left: 10px;
 }
 
-.artist {
-    padding: 40px;
-
-}
-
-.artist-h2 {
-    padding: 5px;
-}
-
-.artist-h3 {
-    padding-top: 50px;
+.artist img{
+    width: 350px;
+    height: 350px;
 }
 
 button {
@@ -274,7 +257,9 @@ button {
     font-weight: 700;
     color: #333;
 }
-
+main{
+    justify-content: flex-start;
+}
 .art {
     display: flex;
     padding-top: 3%;
@@ -291,7 +276,7 @@ button {
 }
 
 .artist_info {
-    padding: 8%;
+    line-height: 50px;
 }
 
 footer {
