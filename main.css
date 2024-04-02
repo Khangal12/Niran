@@ -43,6 +43,12 @@ button {
   height: 70px;
   font-size: var(--font-btn);
   background-color: var(--color-footer-bg);
+  color: white;
+  border: none;
+}
+button:hover {
+  background-color: var(--color-bg);
+  color: var(--color-footer-bg);
 }
 
 h1 {
