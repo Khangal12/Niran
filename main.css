@@ -508,6 +508,9 @@ main {
 .makeupPic:hover h3 {
   scale: 1.05;
 }
+
+/*orders.html------------------------*/
+
 /* For screens smaller than 768px */
 @media (max-width: 520px) {
   h2 {
