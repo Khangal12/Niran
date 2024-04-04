@@ -103,20 +103,31 @@ header {
   border: 1px solid black;
   background-color: var(--color-search-bar);
 }
+.search-bar{
+  position: relative;
+}
 
 .search p {
   font-size: var(--font-regular);
-  margin-left: 5px;
+  margin-left: 10px;
+}
+input{
+  padding: 1rem;
+}
+input::placeholder{
+  font-size: 20px;
 }
 
 header a {
   align-content: center;
+  
 }
 
 .icon-search {
   width: 30px;
   height: 30px;
-
+position: absolute;
+right: 0;
   background-color: currentColor;
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' d='m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314'/%3E%3C/svg%3E");
   margin-right: 10px;
@@ -533,7 +544,7 @@ main {
     font-size: 12px;
     & p{
       color:red;
-      &.selrcted
+   
     } 
   }
   button {
