@@ -519,8 +519,13 @@ main {
   p {
     font-size: 12px;
   }
-  .search p {
+  
+  .search{
     font-size: 12px;
+    & p{
+      color:red;
+      &.selrcted
+    } 
   }
   button {
     width: 150px;
