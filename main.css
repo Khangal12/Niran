@@ -43,6 +43,12 @@ button {
   height: 70px;
   font-size: var(--font-btn);
   background-color: var(--color-footer-bg);
+  color: white;
+  border: none;
+}
+button:hover {
+  background-color: var(--color-bg);
+  color: var(--color-footer-bg);
 }
 
 h1 {
@@ -508,6 +514,9 @@ main {
 .makeupPic:hover h3 {
   scale: 1.05;
 }
+
+/*orders.html------------------------*/
+
 /* For screens smaller than 768px */
 @media (max-width: 520px) {
   h2 {
