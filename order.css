@@ -76,10 +76,7 @@ h3 {
     font-size: var(--font-regular);
     font-weight: 500;
 }
-p{
-    font-size: 25px;
-    gap: 10px;
-}
+
 
 /* Header */
 header {
@@ -242,8 +239,15 @@ i.fa-user {
 
 
 .inf{
+    
 margin-left: 10px;
+ & .name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+}
+
 
 .artist img{
     width: 350px;
@@ -259,24 +263,24 @@ button {
 }
 main{
     justify-content: flex-start;
+    gap: 4rem;
+    margin-top: 10px;
 }
 .art {
     display: flex;
-    padding-top: 3%;
-}
-
-.art2 {
-    display: flex;
-    padding-top: 3%;
-}
-
-.art3 {
-    display: flex;
-    padding-top: 3%;
+    gap: 20px;
 }
 
 .artist_info {
-    line-height: 50px;
+    line-height: 4rem;
+    & p{
+        font-size: 25px;
+        gap: 10px;
+        font-weight: 300;
+    }
+    & b{
+        font-weight: 400;
+    }
 }
 
 footer {
