@@ -38,9 +38,7 @@
           <i class="fa-solid fa-bars"></i>
           <li><a href="main.html">Home</a></li>
           <li class="dropdown">
-            <a href="#"
-              >Makeup<img src="assets/pink-lipstick.svg" alt="niran" />
-            </a>
+            <a href="#">Makeup <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-content">
               <li><a href="makeup.html">Гоёлын будалт</a></li>
               <li><a href="makeup.html">Хуримын будалт</a></li>
@@ -62,55 +60,56 @@
       </nav>
     </header>
     <main class="main-makeup">
-      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-bars" id="sidebar-menu" onclick="showside()""></i>
       <aside class="sidebar">
-        <ul class="custom-menu">
-          <li class="custom-dropdown">
-            <i class="fa-solid fa-bars"></i>
-            <button class="custom-dropbtn">
-              Гоёлын<i class="fas fa-chevron-down"></i>
-            </button>
-            <ul class="custom-dropdown-content">
-              <li><a href="#">хөмсөг</a></li>
-              <li><a href="#">нүд</a></li>
-              <li><a href="#">гэрэл, сүүдэр</a></li>
-              <li><a href="#">уруул</a></li>
-            </ul>
-          </li>
-          <li class="custom-dropdown">
-            <button class="custom-dropbtn">
-              Хуримын<i class="fas fa-chevron-down"></i>
-            </button>
-            <ul class="custom-dropdown-content">
-              <li><a href="#">хөмсөг</a></li>
-              <li><a href="#">нүд</a></li>
-              <li><a href="#">гэрэл, сүүдэр</a></li>
-              <li><a href="#">уруул</a></li>
-            </ul>
-          </li>
-          <li class="custom-dropdown">
-            <button class="custom-dropbtn">
-              Тайз дэлгэцийн<i class="fas fa-chevron-down"></i>
-            </button>
-            <ul class="custom-dropdown-content">
-              <li><a href="#">хөмсөг</a></li>
-              <li><a href="#">нүд</a></li>
-              <li><a href="#">гэрэл, сүүдэр</a></li>
-              <li><a href="#">уруул</a></li>
-            </ul>
-          </li>
-          <li class="custom-dropdown">
-            <button class="custom-dropbtn">
-              Энгийн<i class="fas fa-chevron-down"></i>
-            </button>
-            <ul class="custom-dropdown-content">
-              <li><a href="#">хөмсөг</a></li>
-              <li><a href="#">нүд</a></li>
-              <li><a href="#">гэрэл, сүүдэр</a></li>
-              <li><a href="#">уруул</a></li>
-            </ul>
-          </li>
-        </ul>
+        <div id="leftside-navigation" class="nano">
+          <ul class="nano-content">
+            <li class="sub-menu">
+             <span>Гоёлын</span
+                ><i class="arrow fa fa-angle-right pull-right"></i
+              ></a>
+              <ul>
+                <li><a href="#">хөмсөг</a></li>
+                <li><a href="#">нүд</a></li>
+                <li><a href="#">гэрэл, сүүдэр</a></li>
+                <li><a href="#">уруул</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu">
+           <span>Тайз</span
+                ><i class="arrow fa fa-angle-right pull-right"></i
+              ></a>
+              <ul>
+                <li><a href="#">хөмсөг</a></li>
+                <li><a href="#">нүд</a></li>
+                <li><a href="#">гэрэл, сүүдэр</a></li>
+                <li><a href="#">уруул</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu">
+             <span>Энгийн</span
+                ><i class="arrow fa fa-angle-right pull-right"></i
+              ></a>
+              <ul>
+                <li><a href="#">хөмсөг</a></li>
+                <li><a href="#">нүд</a></li>
+                <li><a href="#">гэрэл, сүүдэр</a></li>
+                <li><a href="#">уруул</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu">
+             <span>Хуримын</span
+                ><i class="arrow fa fa-angle-right pull-right"></i
+              ></a>
+              <ul>
+                <li><a href="#">хөмсөг</a></li>
+                <li><a href="#">нүд</a></li>
+                <li><a href="#">гэрэл, сүүдэр</a></li>
+                <li><a href="#">уруул</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </aside>
 
       <div class="small-main-makeup">
@@ -226,4 +225,14 @@
       </div>
     </footer>
   </body>
+  <script >
+     const side = document.querySelector(".aside");
+const menu = document.querySelector(".nav-links");
+function showside() {
+  side.style.display = "block";
+}
+function showmenu(){
+  menu.style.display = "flex"
+}
+  </script>
 </html>
