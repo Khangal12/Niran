@@ -81,6 +81,7 @@ h3 {
     display: flex;
     align-items: flex-end;
     padding-right: 15%;
+
 }
 
 .hr {
@@ -232,8 +233,6 @@ i.fa-user {
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 20px 0 20px 0;
-
 }
 
 .makeupPic {
@@ -245,9 +244,14 @@ i.fa-user {
 
 .inf {
     display: flex;
-}
+    margin: 3%;
 
-.time {}
+    .def {
+        margin-left: 8%;
+        display: flexbox;
+    }
+
+}
 
 .fa-plus {
     font-size: 100px;
@@ -291,6 +295,63 @@ i.fa-user {
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
+}
+
+
+.timeto {
+    max-width: 12.5rem;
+    width: 100%;
+    height: 3.2rem;
+    border: none;
+    color: white;
+}
+
+.artistc {
+    align-items: center;
+    padding: 35px;
+    left: 15px;
+
+    .text {
+        display: flex;
+        padding: 10px;
+    }
+
+    .text2 {
+        display: flex;
+        padding: 10px;
+    }
+
+    button {
+        height: 50px;
+        width: 200px;
+        padding: 2px;
+        margin: 1%;
+    }
+
+
+}
+
+.timeto {
+    align-items: center;
+    border-radius: 50px;
+    max-width: 12.5rem;
+    width: 100%;
+    height: 3.2rem;
+    border: none;
+    color: white;
+
+}
+
+.verify {
+    align-items: center;
+    border-radius: 50px;
+    max-width: 12.5rem;
+    width: 25.5rem;
+    height: 180px;
+    border: none;
+    color: white;
+
+
 }
 
 footer {
@@ -358,4 +419,192 @@ footer>* {
 .footer-logo i:hover {
     font-weight: bold;
     color: black;
+}
+
+@media (max-width: 520px) {
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .search {
+        font-size: 12px;
+
+        & p {
+            color: red;
+
+        }
+    }
+
+    body {
+        font-size: var(--font-small);
+        margin: 0;
+        right: 0;
+        padding: 0;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .footer-logo {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .search {
+        width: 100%;
+    }
+
+    .icon-search {
+        margin-right: 5px;
+    }
+
+    .navbar .nav-links li {
+        display: none;
+    }
+
+    .nav-links .fa-bars {
+        display: block;
+    }
+
+    /* Main */
+
+    /* Main Comment */
+    .comment img {
+        width: 80px;
+        height: 80px;
+        margin-left: 10px;
+    }
+
+    /* Company */
+    .company img {
+        width: 300px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 5px 10px 20px 10px;
+    }
+
+    .footer-logo {
+        margin-right: 50px;
+    }
+
+    .main-makeup .fa-bars {
+        display: block;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* Navbar */
+    .navbar .nav-links li {
+        margin-right: 50px;
+    }
+
+    /* Main */
+
+    /* Main Comment */
+    .comment img {
+        width: 80px;
+        height: 80px;
+        margin-left: 20px;
+    }
+
+    /* Company */
+    .company img {
+        width: 350px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 5px 20px 20px 20px;
+    }
+
+    .footer-logo {
+        margin-right: 100px;
+    }
+
+    .main-makeup {
+        padding: 0 10px 0 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Navbar */
+    .navbar .nav-links li {
+        margin-right: 70px;
+    }
+
+    /* Main */
+    main {
+        padding: 20px 0 20px 0;
+    }
+
+    .artistImage,
+    .mainImg img {
+        height: 600px;
+    }
+
+    /* Main Comment */
+    .comment img {
+        width: 100px;
+        height: 100px;
+        margin-left: 30px;
+    }
+
+    /* Company */
+    .company img {
+        width: 400px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 5px 40px 40px 40px;
+    }
+
+    .footer-logo {
+        margin-right: 200px;
+    }
+
+    .main-makeup {
+        margin-top: 20px 0 20px 0;
+    }
+
+    .small-main-makeup img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .small-main-makeup {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .small-main-makeup {
+        grid-template-columns: 1fr;
+    }
+
+    .small-main-makeup h3 {
+        font-size: 20px;
+        font-weight: 500;
+    }
 }
