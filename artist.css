@@ -272,7 +272,6 @@ i.fa-user {
 }
 
 .products {
-<<<<<<< Updated upstream
   display: flex;
   align-items: center;
   justify-content: center;
@@ -282,19 +281,6 @@ i.fa-user {
 .fa-plus {
   font-size: 100px;
   align-self: center;
-=======
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 20px 0 20px 0;
-
-}
-
-.fa-plus {
-    font-size: 100px;
-    align-self: center;
->>>>>>> Stashed changes
 }
 
 .item {
@@ -324,7 +310,6 @@ i.fa-user {
 .product {
   gap: 10px;
 }
-<<<<<<< Updated upstream
 .mainArtist {
   width: 250px;
   height: 50px;
@@ -334,83 +319,3 @@ i.fa-user {
   gap: 30px;
   margin-top: 20px;
 }
-=======
-
-.mainArtist {
-    width: 250px;
-    height: 50px;
-}
-
-.orderButton {
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: var(--color-footer-bg);
-    width: 100%;
-    max-width: 1600px;
-    padding: 5px 40px 40px 40px;
-    justify-content: space-between;
-}
-
-footer>* {
-    margin: 0 5%;
-}
-
-.footerpara:hover i,
-.footerpara:hover p {
-    text-decoration: underline;
-    color: black;
-    font-weight: bold;
-}
-
-.footerContact,
-.help,
-.footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    row-gap: 10px;
-    color: white;
-}
-
-.footerContact img {
-    width: 100px;
-    height: 60px;
-
-    border-radius: 20px;
-}
-
-.footer-logo {
-    margin-top: 60px;
-    margin-right: 200px;
-}
-
-.footer-logo .footer-col {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.help {
-    margin-top: 70px;
-}
-
-.help p:hover {
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.footer-logo i:hover {
-    font-weight: bold;
-    color: black;
-}
->>>>>>> Stashed changes
