@@ -1,0 +1,361 @@
+@import url(assets/order.svg);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+    --color-bg: #faecf7;
+    --color-footer-bg: #faa8e8;
+    --color-search-bar: rgb(241, 221, 239);
+    --color-logo: #fdfdff;
+    --color-main-bg: #250b14;
+    --color-comment: #f5e3ea;
+    --font-regular: 20px;
+    --font-small: 16px;
+    --font-big: 30px;
+    --font-btn: 25px;
+    --image-border-radius: 100px;
+    --logo-border-radius: 30px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "head"
+        "main"
+        "footer";
+    width: 100%;
+    max-width: 1440px;
+    min-width: 375px;
+    margin: 0 auto;
+    background-color: var(--color-bg);
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border-radius: 50px;
+    width: 290px;
+    height: 70px;
+    font-size: var(--font-btn);
+    background-color: var(--color-footer-bg);
+    color: #333;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: var(--font-btn);
+    padding-left: 4em;
+
+}
+
+h2 {
+    font-size: var(--font-big);
+    font-weight: 600;
+    color: #333;
+}
+
+h3 {
+    font-size: var(--font-regular);
+    font-weight: 500;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.star {
+    color: var(--color-footer-bg);
+    display: contents;
+
+}
+
+.products p {
+    display: flex;
+    align-items: flex-end;
+    padding-right: 15%;
+}
+
+.hr {
+    display: flex;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    margin: 0 8%;
+    grid-area: head;
+}
+
+.header-logo {
+    border-radius: var(--logo-border-radius);
+}
+
+.header-search {
+    gap: 10%;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    height: 46px;
+    border-radius: var(--logo-border-radius);
+    border: 1px solid black;
+    background-color: var(--color-search-bar);
+}
+
+.search p {
+    font-size: var(--font-regular);
+    margin-left: 5px;
+}
+
+header a {
+    align-content: center;
+}
+
+.icon-search {
+    width: 30px;
+    height: 30px;
+
+    background-color: currentColor;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' d='m21 21l-4.343-4.343m0 0A8 8 0 1 0 5.343 5.343a8 8 0 0 0 11.314 11.314'/%3E%3C/svg%3E");
+    margin-right: 10px;
+    color: black;
+}
+
+i.fa-user {
+    color: black;
+}
+
+.line::before {
+    content: "";
+    display: block;
+    border-bottom: 1px solid black;
+    margin: 5px 0 10px 0;
+}
+
+.navbar {
+    background-color: var(--color-bg);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--image-border-radius);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-right: 70px;
+    position: relative;
+}
+
+.navbar .nav-links li:last-child {
+    margin-right: 0;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: var(--font-regular);
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ff69b4;
+}
+
+.nav-links .fa-bars {
+    display: none;
+    align-self: center;
+    font-size: 30px;
+}
+
+.dropdown-content {
+    padding: 30px 0 30px 0;
+    display: none;
+    /* Change 'hidden' to 'none' */
+    list-style: none;
+    position: absolute;
+    background-color: var(--color-bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.dropdown img {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-content li {
+    padding: 10px 20px;
+}
+
+
+.products img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+
+.products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 20px 0 20px 0;
+
+}
+
+.makeupPic {
+    align-content: flex-end;
+    width: 420px;
+    height: 450px;
+    border-radius: 50%;
+}
+
+.inf {
+    display: flex;
+}
+
+.time {}
+
+.fa-plus {
+    font-size: 100px;
+    align-self: center;
+}
+
+.item {
+    grid-area: span 3;
+}
+
+.item1 {
+    grid-area: span 3;
+}
+
+.products p {
+    margin-top: 10px;
+}
+
+.products img {
+    transition: all 0.3s ease;
+}
+
+.products:hover img {
+    scale: 1.05;
+}
+
+.products:hover h3 {
+    scale: 1.05;
+}
+
+.product {
+    gap: 10px;
+}
+
+.mainArtist {
+    width: 250px;
+    height: 50px;
+}
+
+.orderButton {
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--color-footer-bg);
+    width: 100%;
+    max-width: 1600px;
+    padding: 5px 40px 40px 40px;
+    justify-content: space-between;
+}
+
+footer>* {
+    margin: 0 5%;
+}
+
+.footerpara:hover i,
+.footerpara:hover p {
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+}
+
+.footerContact,
+.help,
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    row-gap: 10px;
+    color: white;
+}
+
+.footerContact img {
+    width: 100px;
+    height: 60px;
+
+    border-radius: 20px;
+}
+
+.footer-logo {
+    margin-top: 60px;
+    margin-right: 200px;
+}
+
+.footer-logo .footer-col {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.help {
+    margin-top: 70px;
+}
+
+.help p:hover {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.footer-logo i:hover {
+    font-weight: bold;
+    color: black;
+}
