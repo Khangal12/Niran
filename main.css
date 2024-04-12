@@ -333,12 +333,15 @@ main {
 
 /* Main Comment */
 .mainComment {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin-top: 20px;
 }
 .slide{
   display: none;
   gap: 1rem;
+  height: 100%;
 }
 .comments {
   width: 100%;
@@ -629,6 +632,11 @@ main {
   .search {
     width: 100%;
   }
+  .slide{
+    
+     & .comment{ font-size: 11px;}
+    
+  }
   .icon-search {
     margin-right: 5px;
   }
@@ -642,9 +650,7 @@ main {
   /* Main */
 
   /* Main Comment */
-  .slide{
-    flex-direction: column;
-  }
+  
   .comment img {
     width: 80px;
     height: 80px;
@@ -678,7 +684,11 @@ main {
   /* Main */
 
   /* Main Comment */
-
+  .slide{
+    & .comment{
+      font-size:14px;
+    }
+  }
   .comment img {
     width: 80px;
     height: 80px;
@@ -743,10 +753,17 @@ main {
   .small-main-makeup {
     grid-template-columns: 1fr 1fr;
   }
+ 
+  
 }
 @media (max-width: 560px) {
   .small-main-makeup {
     grid-template-columns: 1fr;
+  }
+  .slide{
+    & p{
+      font-size: 9px;
+    }
   }
   .small-main-makeup h3 {
     font-size: 20px;
