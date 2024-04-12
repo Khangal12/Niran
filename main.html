@@ -62,12 +62,31 @@
     </header>
     <main>
       <div class="mainImg"><img src="assets/main.svg" /></div>
-      <section class="artistImage">
+      <div class="slideshow-container"> 
+        <section class="artistImage fade">
+          <img src="/assets/makeup.jpg"  alt="makeup">
         <button id="mainArtist">Артист мэдээлэл</button>
-        <i class="fa-solid fa-angle-left fa-2xl"></i>
-        <i class="fa-solid fa-angle-right fa-2xl"></i>
-      </section>
+        </section>
+        <section class="artistImage fade">
+          <img src="/assets/budalt (10).png" alt="makeup">
+        <button id="mainArtist">Артист мэдээлэл</button>
+        </section>
+        <section class="artistImage fade">
+          <img src="/assets/budalt (9).png"  alt="makeup">
+        <button id="mainArtist">Артист мэдээлэл</button>
+        </section>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
 
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+     
       <section class="mainComment">
         <h2>Хэрэглэгчийн сэтгэгдэл</h2>
         <h3>
@@ -75,8 +94,8 @@
           үйлчилж тэдний сэтгэл ханамжийг ямагт эрхэмлэдэг.
         </h3>
         <section class="comments flexrow">
-          <i class="fa-solid fa-angle-left fa-2xl"></i>
-
+          
+          <div class="slide fade">
           <article class="comment">
             <div class="flexrow">
               <img src="assets/budalt (9).png" alt="niran" class="userImg" />
@@ -116,7 +135,7 @@
           </article>
           <article class="comment">
             <div class="flexrow">
-              <img src="assets/budalt (9).png" alt="niran" class="userImg" />
+              <img src="assets/budalt (11).png" alt="niran" class="userImg" />
               <div class="userName">
                 <p>@coco_buyan</p>
                 <h3>Artist Ganjaa</h3>
@@ -150,8 +169,159 @@
               </p>
             </section>
           </article>
-          <i class="fa-solid fa-angle-right fa-2xl"></i>
-        </section>
+           </div>
+          <div class="slide fade">
+          <article class="comment">
+            <div class="flexrow">
+              <img src="assets/budalt (10).png" alt="niran" class="userImg" />
+              <div class="userName">
+                <p>@coco_buyan</p>
+                <h3>Artist Ganjaa</h3>
+                <div class="star">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <section class="userComment">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+                dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+                est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
+                consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
+                temporibus voluptas eos quam quas dolorum. Adipisci, maxime
+                repellendus accusamus aliquid earum est debitis hic corporis
+                incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
+                elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
+                quam quas dolorum. Adipisci, maxime repellendus accusamus
+                aliquid earum est debitis hic corporis incidunt? Lorem ipsum
+                dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
+                dolor incidunt temporibus voluptas eos quam quas dolorum.
+                Adipisci, maxime repellendus accusamus aliquid earum est debitis
+                hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                adipisiem ipsum dolor sit ameght consectetur
+              </p>
+            </section>
+          </article>
+          <article class="comment">
+            <div class="flexrow">
+              <img src="assets/budalt (10).png" alt="niran" class="userImg" />
+              <div class="userName">
+                <p>@coco_buyan</p>
+                <h3>Artist Ganjaa</h3>
+                <div class="star">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <section class="userComment">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+                dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+                est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
+                consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
+                temporibus voluptas eos quam quas dolorum. Adipisci, maxime
+                repellendus accusamus aliquid earum est debitis hic corporis
+                incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
+                elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
+                quam quas dolorum. Adipisci, maxime repellendus accusamus
+                aliquid earum est debitis hic corporis incidunt? Lorem ipsum
+                dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
+                dolor incidunt temporibus voluptas eos quam quas dolorum.
+                Adipisci, maxime repellendus accusamus aliquid earum est debitis
+                hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                adipisiem ipsum dolor sit ameght consectetur
+              </p>
+            </section>
+          </article>
+            </div>
+          <div class="slide fade">
+        <article class="comment">
+          <div class="flexrow">
+            <img src="assets/budalt (10).png" alt="niran" class="userImg" />
+            <div class="userName">
+              <p>@coco_buyan</p>
+              <h3>Artist Ganjaa</h3>
+              <div class="star">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <section class="userComment">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+              dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+              est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
+              consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
+              temporibus voluptas eos quam quas dolorum. Adipisci, maxime
+              repellendus accusamus aliquid earum est debitis hic corporis
+              incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
+              elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
+              quam quas dolorum. Adipisci, maxime repellendus accusamus
+              aliquid earum est debitis hic corporis incidunt? Lorem ipsum
+              dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
+              dolor incidunt temporibus voluptas eos quam quas dolorum.
+              Adipisci, maxime repellendus accusamus aliquid earum est debitis
+              hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+              adipisiem ipsum dolor sit ameght consectetur
+            </p>
+          </section>
+        </article>
+        <article class="comment">
+          <div class="flexrow">
+            <img src="assets/budalt (10).png" alt="niran" class="userImg" />
+            <div class="userName">
+              <p>@coco_buyan</p>
+              <h3>Artist Ganjaa</h3>
+              <div class="star">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <section class="userComment">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+              ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+              dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+              est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
+              consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
+              temporibus voluptas eos quam quas dolorum. Adipisci, maxime
+              repellendus accusamus aliquid earum est debitis hic corporis
+              incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
+              elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
+              quam quas dolorum. Adipisci, maxime repellendus accusamus
+              aliquid earum est debitis hic corporis incidunt? Lorem ipsum
+              dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
+              dolor incidunt temporibus voluptas eos quam quas dolorum.
+              Adipisci, maxime repellendus accusamus aliquid earum est debitis
+              hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+              adipisiem ipsum dolor sit ameght consectetur
+            </p>
+          </section>
+        </article>
+            </div>
+  
+       
+        
+         </section>
       </section>
       <section class="company flexrow">
         <div class="flexcol">
@@ -201,4 +371,6 @@
       </div>
     </footer>
   </body>
+  <script src="slideshow.js"></script>
+  <script src="autoshow-comment.js"></script>
 </html>
