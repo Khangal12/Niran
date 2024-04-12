@@ -108,3 +108,10 @@
     margin-left: 7%;
   }
 }
+@media (max-width:800px) {
+  .orders-section{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
