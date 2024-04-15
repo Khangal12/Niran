@@ -15,6 +15,7 @@
     --image-border-radius: 100px;
     --logo-border-radius: 30px;
 }
+
 body {
     display: grid;
     grid-template-columns: auto;
@@ -147,7 +148,6 @@ i.fa-user {
     justify-content: space-between;
     align-items: center;
 }
-
 .navbar .logo {
     font-weight: bold;
     text-decoration: none;
@@ -237,18 +237,18 @@ i.fa-user {
 }
 
 
-.inf{
-    
-margin-left: 10px;
- & .name{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+.inf {
+
+    margin-left: 10px;
+
+    & .name {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
-
-.artist img{
+.artist img {
     width: 350px;
     height: 350px;
 }
@@ -260,11 +260,13 @@ button {
     font-weight: 700;
     color: #333;
 }
-main{
+
+main {
     justify-content: flex-start;
     gap: 4rem;
     margin-top: 10px;
 }
+
 .art {
     display: flex;
     gap: 20px;
@@ -272,12 +274,14 @@ main{
 
 .artist_info {
     line-height: 4rem;
-    & p{
+
+    & p {
         font-size: 25px;
         gap: 10px;
         font-weight: 300;
     }
-    & b{
+
+    & b {
         font-weight: 400;
     }
 }
@@ -348,3 +352,65 @@ footer>* {
     font-weight: bold;
     color: black;
 }
+
+@media (max-width: 520px) {
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .search {
+        font-size: 12px;
+    }
+
+    button {
+        width: 150px;
+        height: 50px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    body {
+        font-size: var(--font-small);
+        margin: 0;
+        right: 0;
+        padding: 0;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .footer-logo {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .search {
+        width: 100%;
+    }
+
+    .comment {
+        font-size: 11px;
+    }
+
+    .icon-search {
+        margin-right: 5px;
+    }
+
+    .navbar .nav-links li {
+        display: none;
+    }
+
+    .nav-links .fa-bars {
+        display: block;
+    }

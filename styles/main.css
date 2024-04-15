@@ -149,7 +149,6 @@ i.fa-user {
   margin: 5px 0 10px 0;
 }
 
-/*header navbar*/
 .navbar {
   background-color: var(--color-bg);
   padding: 20px;
@@ -734,8 +733,6 @@ main {
 }
 
 @media (min-width: 768px) {
-
-  /* Navbar */
   .navbar .nav-links li {
     margin-right: 50px;
   }
