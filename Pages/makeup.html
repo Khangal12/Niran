@@ -63,55 +63,55 @@
       <aside class="sidebar">
         <div id="leftside-navigation" class="nano">
           <ul class="nano-content">
-            <li class="sub-menu">
-             <span>Гоёлын</span
+            <li class="sub-menu" >
+             <span onclick="window.location='/Pages/makeup.html?type=decoration'">Гоёлын</span
                 ><i class="arrow fa fa-angle-right pull-right"></i
               ></a>
               <ul>
-                <li><a href="#">хөмсөг</a></li>
-                <li><a href="#">нүд</a></li>
-                <li><a href="#">гэрэл, сүүдэр</a></li>
-                <li><a href="#">уруул</a></li>
+                <li><a href="/Pages/makeup.html?type=decoration&part=eye-brows">хөмсөг</a></li>
+                <li><a href="/Pages/makeup.html?type=decoration&part=eye">нүд</a></li>
+                <li><a href="/Pages/makeup.html?type=decoration&part=shadow">гэрэл, сүүдэр</a></li>
+                <li><a href="/Pages/makeup.html?type=decoration&part=lip">уруул</a></li>
               </ul>
             </li>
             <li class="sub-menu">
-           <span>Тайз</span
+           <span onclick="window.location='/Pages/makeup.html?type=stage'"">Тайз</span
                 ><i class="arrow fa fa-angle-right pull-right"></i
               ></a>
               <ul>
-                <li><a href="#">хөмсөг</a></li>
-                <li><a href="#">нүд</a></li>
-                <li><a href="#">гэрэл, сүүдэр</a></li>
-                <li><a href="#">уруул</a></li>
+                <li><a href="/Pages/makeup.html?type=stage&part=eye-brows">хөмсөг</a></li>
+                <li><a href="/Pages/makeup.html?type=stage&part=eye">нүд</a></li>
+                <li><a href="/Pages/makeup.html?type=stage&part=shadow">гэрэл, сүүдэр</a></li>
+                <li><a href="/Pages/makeup.html?type=stage&part=lip">уруул</a></li>
               </ul>
             </li>
             <li class="sub-menu">
-             <span>Энгийн</span
+             <span onclick="window.location='/Pages/makeup.html?type=simple'"">Энгийн</span
                 ><i class="arrow fa fa-angle-right pull-right"></i
               ></a>
               <ul>
-                <li><a href="#">хөмсөг</a></li>
-                <li><a href="#">нүд</a></li>
-                <li><a href="#">гэрэл, сүүдэр</a></li>
-                <li><a href="#">уруул</a></li>
+                <li><a href="/Pages/makeup.html?type=casual&part=eye-brows">хөмсөг</a></li>
+                <li><a href="/Pages/makeup.html?type=casual&part=eye">нүд</a></li>
+                <li><a href="/Pages/makeup.html?type=casual&part=shadow">гэрэл, сүүдэр</a></li>
+                <li><a href="/Pages/makeup.html?type=casual&part=lip">уруул</a></li>
               </ul>
             </li>
             <li class="sub-menu">
-             <span>Хуримын</span
+             <span onclick="window.location='/Pages/makeup.html?type=wedding'"">Хуримын</span
                 ><i class="arrow fa fa-angle-right pull-right"></i
               ></a>
               <ul>
-                <li><a href="#">хөмсөг</a></li>
-                <li><a href="#">нүд</a></li>
-                <li><a href="#">гэрэл, сүүдэр</a></li>
-                <li><a href="#">уруул</a></li>
+                <li><a href="/Pages/makeup.html?type=wedding&part=eye-brows">хөмсөг</a></li>
+                <li><a href="/Pages/makeup.html?type=wedding&part=eye">нүд</a></li>
+                <li><a href="/Pages/makeup.html?type=wedding&part=shadow">гэрэл, сүүдэр</a></li>
+                <li><a href="/Pages/makeup.html?type=wedding&part=lip">уруул</a></li>
               </ul>
             </li>
           </ul>
         </div>
       </aside>
 
-      <div class="small-main-makeup">
+      <div class="small-main-makeup" id="makeup-body">
         <article class="makeupPic item">
           <img src="/assets/makeup.jpg" alt="niran" />
 
@@ -234,4 +234,6 @@ function showmenu(){
   menu.style.display = "flex"
 }
   </script>
+  <script src="/scripts/filter.js"></script>
+
 </html>

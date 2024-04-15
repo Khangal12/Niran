@@ -433,7 +433,7 @@ main {
   border-radius: 10px;
 }
 
-.company .flexcol>* {
+.company .flexcol > * {
   margin-bottom: 10px;
 }
 
@@ -450,7 +450,7 @@ footer {
   justify-content: space-between;
 }
 
-footer>* {
+footer > * {
   margin: 0 5%;
 }
 
@@ -531,7 +531,7 @@ footer>* {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-#leftside-navigation ul li.active>a {
+#leftside-navigation ul li.active > a {
   transition: all 1s ease;
   color: var(--color-footer-bg);
 }
@@ -770,7 +770,6 @@ main {
 }
 
 @media (min-width: 1024px) {
-
   /* Navbar */
   .navbar .nav-links li {
     margin-right: 70px;
