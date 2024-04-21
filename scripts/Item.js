@@ -1,14 +1,13 @@
-export default class Item { 
+export default class Item {
+  constructor(itemObj) {
+    this.artist = itemObj.artist;
+    this.img = itemObj.img;
+    this.type = itemObj.type;
+    this.part = itemObj.part;
+  }
 
-    constructor(itemObj) { 
-        this.artist = itemObj.artist;
-        this.img = itemObj.img
-        this.type = itemObj.type;
-        this.part = itemObj.part;
-    }
-
-    Render() { 
-       return `<article class="makeupPic item">
+  Render() {
+    return `<article class="makeupPic item">
        <img src=${this.img} alt="niran" />
        <h3>Артист ${this.artist}</h3>
        <div class="star">
@@ -18,6 +17,6 @@ export default class Item {
          <i class="fa-regular fa-star"></i>
          <i class="fa-regular fa-star"></i>
        </div>
-     </article>`
-    }
+     </article>`;
+  }
 }
