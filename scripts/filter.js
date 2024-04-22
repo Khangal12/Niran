@@ -1,25 +1,4 @@
-class Items{
-  constructor(itemObj) {
-    this.artist = itemObj.artist;
-    this.img = itemObj.img;
-    this.type = itemObj.type;
-    this.part = itemObj.part;
-  }
-
-  Render() {
-    return `<article class="makeupPic item">
-       <img src=${this.img} alt="niran" />
-       <h3>Артист ${this.artist}</h3>
-       <div class="star">
-         <i class="fa fa-star checked"></i>
-         <i class="fa fa-star checked"></i>
-         <i class="fa fa-star checked"></i>
-         <i class="fa-regular fa-star"></i>
-         <i class="fa-regular fa-star"></i>
-       </div>
-     </article>`;
-  }
-}
+import Item from "./Item.js"
 
 
 const urlParams = new URLSearchParams(document.location.search);
@@ -45,19 +24,15 @@ fetch("https://api.jsonbin.io/v3/b/6624ed9bacd3cb34a83c2119")
     }
 
     const makeupHTMLArray = filteredMakeup.map((itemObj) => {
-      const item = new Items(itemObj);
+      const item = new Item(itemObj);
       return item.Render();
     });
     const makeupHTML = makeupHTMLArray.reduce(
       (prev, current) => prev + current
     );
 
-    const makeupBody = document.getElementById("makeup-body");
-    if (makeupBody) {
-      makeupBody.innerHTML = makeupHTML;
-    } else {
-      console.log("Element with ID 'makeup-body' not found.");
-    }
+document.getElementById("makeup-body").innerHTML=makeupHTML;
+    
   })
   .catch((error) => {
     console.log("Fetch error:", error);
