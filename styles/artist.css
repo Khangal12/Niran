@@ -493,10 +493,6 @@ header {
     margin-right: 200px;
   }
 
-  .main-makeup {
-    margin-top: 20px 0 20px 0;
-  }
-
   .small-main-makeup img {
     width: 250px;
     height: 250px;
@@ -527,12 +523,33 @@ header {
 }
 
 @media (max-width: 400px) {
+  .info {
+    display: column;
 
-  .artist {
-    column-width: 400px;
+    p {
+      font-size: 10px;
+    }
   }
 
-  p {
-    font-size: 10px;
+  .flexrow {
+    flex-direction: column;
+  }
+
+  .artist {
+    flex-direction: column;
+  }
+
+  .makeupPic {
+    border-radius: 100%;
+
+  }
+
+  .comment {
+    flex-direction: column;
+  }
+
+
+  * {
+    display: block;
   }
 }

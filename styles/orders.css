@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 :root {
   --color-bg: #faecf7;
   --color-footer-bg: #faa8e8;
@@ -18,15 +19,18 @@
   display: flex;
   justify-content: center;
   gap: 10rem;
+
   & img {
     width: 310px;
     height: 310px;
     border-radius: 50%;
   }
+
   & .artist {
     gap: 5px;
   }
 }
+
 .info {
   display: flex;
   flex-direction: column;
@@ -55,6 +59,7 @@
   & .hours {
     gap: 10px;
   }
+
   & .verify-btn {
     max-width: 260px;
     width: 100%;
@@ -63,6 +68,7 @@
     color: white;
     margin-top: 20px;
   }
+
   & .order-hour:hover,
   & .order-day:hover,
   & .verify-btn:hover {
@@ -72,31 +78,38 @@
     transition: all 0.3s ease;
   }
 }
+
 /*products*/
 .products {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10rem;
+
   & .fa-plus {
     font-size: 50px;
   }
 }
+
 .product {
   gap: 10px;
+
   & img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
   }
+
   & img:hover {
     scale: 1.05;
   }
 }
+
 .product:hover img,
 .product:hover h3 {
   scale: 1.05;
 }
+
 .bvteelvvd {
   width: 100%;
   display: flex;
@@ -104,10 +117,12 @@
   justify-content: center;
   margin-top: 5rem;
   gap: 30px;
+
   & h1.title {
     margin-left: 7%;
   }
 }
+
 @media (max-width: 520px) {
   h2 {
     font-size: 16px;
@@ -311,4 +326,17 @@
     font-size: 20px;
     font-weight: 500;
   }
+
+  .orders-section {
+    flex-direction: column;
+  }
+
+  .product {
+    width: 100%;
+  }
+  .products {
+    flex-direction: column;
+    width: 100%;
+  }
+  
 }
