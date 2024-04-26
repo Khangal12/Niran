@@ -29,6 +29,9 @@ const typeParam = urlParams.get("type");
 const partParam = urlParams.get("part");
 let filteredMakeup;
 
+
+
+
 fetch("https://api.jsonbin.io/v3/b/6624ed9bacd3cb34a83c2119")
   .then((result) => {
     return result.json();
