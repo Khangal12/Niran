@@ -1,0 +1,28 @@
+{
+    "record":{
+    "products": [
+    {
+        "artist": "Nomin",
+        "img": "https://wp-assets.makemebridal.co.uk/uploads/2022/01/001-shimmer-bridal-makeup-cj-beauty-co-775x1024.jpg",
+        "year": "10",
+        "reward":"MISS WORLD 2023",
+        "count":"2"
+        
+    },
+    {
+        "artist": "Khangal",
+        "img": "https://wp-assets.makemebridal.co.uk/uploads/2022/01/001-shimmer-bridal-makeup-cj-beauty-co-775x1024.jpg",
+        "year": "5",
+        "reward":"MISS ASIA 2020",
+        "count":"3"
+    },
+    {
+        "artist": "Zaya",
+        "img": "https://wp-assets.makemebridal.co.uk/uploads/2022/01/001-shimmer-bridal-makeup-cj-beauty-co-775x1024.jpg",
+        "year": "4",
+        "reward":"MISS EUROPE 2019",
+        "count":"3"
+    }
+]
+    }
+}

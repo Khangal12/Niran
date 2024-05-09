@@ -1,7 +1,4 @@
-// main.js
-import Item from "./Item";
-
-
+import Item from "./Item.js";
 const urlParams = new URLSearchParams(document.location.search);
 const typeParam = urlParams.get("type");
 const partParam = urlParams.get("part");

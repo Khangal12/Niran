@@ -1,5 +1,3 @@
-
-
 export default class Item {
   constructor(itemObj) {
     this.artist = itemObj.artist;

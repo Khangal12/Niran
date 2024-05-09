@@ -21,136 +21,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script type="module" src="/scripts/login.js"></script>
+    <script type="module" src="/scripts/my-header.js"></script>
+    <script type="module" src="/scripts/my-artist.js"></script>
+    <script type="module" src="/scripts/my-star.js"></script>
   </head>
 
   <body>
-    <header>
-      <div class="header-search flexrow">
-        <a href="/Pages/main.html">
-          <img
-            class="header-logo"
-            src="/assets/logo.jpg"
-            alt="niran"
-            width="100"
-            height="60"
-        /></a>
-        <div class="search-bar flexrow">
-          <input class="search" placeholder="Search" />
-          <i class="icon-search"></i>
-        </div>
-
-        <a href="login.html"><i class="fa-regular fa-user"></i></a>
-      </div>
-      <div class="line"></div>
-      <nav class="navbar">
-        <ul class="nav-links">
-          <i class="fa-solid fa-bars"></i>
-          <li><a href="main.html">Home</a></li>
-          <li class="dropdown">
-            <a href="#">Makeup <i class="fas fa-chevron-down"></i></a>
-            <ul class="dropdown-content">
-              <li><a href="/Pages/makeup.html">Гоёлын будалт</a></li>
-              <li><a href="/Pages/makeup.html">Хуримын будалт</a></li>
-              <li><a href="/Pages/makeup.html">Тайз дэлгэцийн будалт</a></li>
-              <li><a href="/Pages/makeup.html">Энгийн будалт</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#">Artists<i class="fas fa-chevron-down"></i></a>
-            <ul class="dropdown-content">
-              <li><a href="/Pages/artist.html">Топ артист</a></li>
-              <li><a href="/Pages/makeup.html">Будалтууд</a></li>
-              <li><a href="/Pages/artist.html">Артистын мэдээлэл</a></li>
-              <li><a href="/Pages/artist.html"> Хэрэглэгчийн сэтгэгдэл</a></li>
-            </ul>
-          </li>
-        </ul>
-        <a href="/Pages/orders.html" class="order-button">Захиалга</a>
-      </nav>
-    </header>
-    <main class="flexcol">
-      <section class="art">
-        <article class="artist">
-          <img src="/assets/budalt-.png" width="200" height="200" alt="budalt" />
-        </article>
-        <article class="inf">
-          <div class="name">
-            <h2>Номин-Эрдэнэ</h2>
-            <div class="star">
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa-regular fa-star"></i>
-              <i class="fa-regular fa-star"></i>
-          </div>
-          </div>
-          <hr />
-          <article class="artist_info">
-            <p><b>Туршлага:</b> 10 жил</p>
-            <p>
-              <b>Шагнал:</b> Miss world 2023, makeup artist 2023,Best Asian
-              Artist 2026
-            </p>
-            <a href="/Pages/artist.html"><button class="more">Дэлгэрэнгүй</button></a>
-            <a href="/Pages/orders.html"><button class="choise">Сонгох</button></a>
-          </article>
-        </article>
-      </section>
-      <section class="art">
-        <article class="artist">
-          <img src="/assets/budalt-.png" width="200" height="200" alt="budalt" />
-        </article>
-        <article class="inf">
-          <div class="name">
-            <h2>Номин-Эрдэнэ</h2>
-            <div class="star">
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa-regular fa-star"></i>
-          </div>
-          </div>
-          <hr />
-          <article class="artist_info">
-            <p><b>Туршлага:</b> 10 жил</p>
-            <p>
-              <b>Шагнал:</b> Miss world 2023, makeup artist 2023,Best Asian
-              Artist 2026
-            </p>
-            <a href="/Pages/artist.html"><button class="more">Дэлгэрэнгүй</button></a>
-            <a href="/Pages/orders.html"><button class="choise">Сонгох</button></a>
-          </article>
-        </article>
-      </section>
-      <section class="art">
-        <article class="artist">
-          <img src="/assets/budalt-.png" width="200" height="200" alt="budalt" />
-        </article>
-        <article class="inf">
-          <div class="name">
-            <h2>Номин-Эрдэнэ</h2>
-            <div class="star">
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa fa-star checked"></i>
-              <i class="fa-regular fa-star"></i>
-            </div>
-          </div>
-
-          <hr />
-          <article class="artist_info">
-            <p><b>Туршлага:</b> 10 жил</p>
-            <p>
-              <b>Шагнал:</b> Miss world 2023, makeup artist 2023,Best Asian
-              Artist 2026
-            </p>
-            <a href="/Pages/artist.html"><button class="more">Дэлгэрэнгүй</button></a>
-            <a href="/Pages/orders.html"><button class="choise">Сонгох</button></a>
-          </article>
-        </article>
-      </section>
+    <my-header></my-header>
+    <main class="flexcol" >
+      <div id="artist-container"></div>
     </main>
     <footer class="flexrow">
       <section class="footerContact">
@@ -188,5 +68,6 @@
         </div>
       </div>
     </footer>
+    <script src="../scripts/Order.js"></script>
   </body>
 </html>

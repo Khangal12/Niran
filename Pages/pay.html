@@ -17,53 +17,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script type="module" src="/scripts/login.js"></script>
+      <script type="module" src="/scripts/my-header.js"></script>
   </head>
   <body>
-    <header>
-      <div class="header-search flexrow">
-        <a href="main.html">
-          <img
-            class="header-logo"
-            src="assets/logo.jpg"
-            alt="niran"
-            width="100"
-            height="60"
-        /></a>
-        <div class="search flexrow">
-          <p>Search Bar</p>
-          <icon class="icon-search"></icon>
-        </div>
-        <a href="login.html"><i class="fa-regular fa-user"></i></a>
-      </div>
-      <div class="line"></div>
-      <nav class="navbar">
-        <ul class="nav-links">
-          <i class="fa-solid fa-bars"></i>
-          <li><a href="main.html">Home</a></li>
-          <li class="dropdown">
-            <a href="#"
-              >Makeup<img src="assets/pink-lipstick.svg" alt="niran" />
-            </a>
-            <ul class="dropdown-content">
-              <li><a href="makeup.html">Гоёлын будалт</a></li>
-              <li><a href="makeup.html">Хуримын будалт</a></li>
-              <li><a href="makeup.html">Тайз дэлгэцийн будалт</a></li>
-              <li><a href="makeup.html">Энгийн будалт</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#">Artists<i class="fas fa-chevron-down"></i></a>
-            <ul class="dropdown-content">
-              <li><a href="artist.html">Топ артист</a></li>
-              <li><a href="makeup.html">Будалтууд</a></li>
-              <li><a href="artist.html">Артистын мэдээлэл</a></li>
-              <li><a href="artist.html"> Хэрэглэгчийн сэтгэгдэл</a></li>
-            </ul>
-          </li>
-        </ul>
-        <a href="pay.html" class="order-button">Захиалга</a>
-      </nav>
-    </header>
+    <my-header></my-header>
     <section class="inf">    
             <article class="def">
                 <img src="assets/makeup.jpg" width="100" height="100" alt="makeup" class="makeupPic"/>
