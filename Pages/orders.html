@@ -14,100 +14,24 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/styles/orders.css">
-    <script type="module" src="/scripts/login.js"></script>
-    <script type="module" src="/scripts/my-header.js"></script>
+    <script type="module" src="/components/my-header.js"></script>
+    <script type="module" src="/scripts/pay.js"></script>
+    <script type="module" src="/components/my-order.js"></script>
+    <script type="module" src="/components/artist-products.js"></script>
+    <script type="module" src="/components/my-star.js"></script>
   </head>
 
   <body>
     <my-header></my-header>
     <main class="orders-main">
-      <section class=" orders-section flexrow">
-        
-
-        <article class="artist flexcol"><img
-          src="/assets/makeup.jpg"
-          alt="makeup"
-          class="makeupPic"
-        />
-        <P>Таны сонгосон артист</P>
-        <h2>НоминЭрдэнэ</h2>
-          <div class="star flexrow">
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa-regular fa-star"></i>
-          </div>          
-          </article>
-         
-         
-          <div class="info">
-          <p> <b>Туршлага:</b>7 жил</p>
-        <p><b>Шагнал:</b>Miss world 2023, Make up artist 2024,Best Asian Artist 2024</p>
-       
- 
-        <div class="orderBtn">
-            <button class="order-day">Өдөр сонгох<i class="fas fa-chevron-down"></i></button>
-        </div>
-        <div class="hours flexcol">
-            <div class=" flexrow">
-                <button class="order-hour">09:00</button>
-                <button class="order-hour">10:00</button>
-                <button class="order-hour">11:00</button>
-                <button class="order-hour">12:00</button>
-            </div>
-            <div class="flexrow">
-                <button class="order-hour">13:00</button>
-                <button class="order-hour">14:00</button>
-                <button class="order-hour">15:00</button>
-                <button class="order-hour">16:00</button>
-            </div>
-            <button class="verify-btn">Баталгаажуулах</button>
-        </div></div>
-            
-
-        </article>
-      </section>
+      <div id="pay-order">
+    </div>
       <div class="bvteelvvd">
       <h1 class="title">Бүтээлүүд:</h1>
-    <section class="products flexrow">
-  
-      <article class="product flexcol">
-        <img src="/assets/budalt-.png" width="100" height="100" alt="budalt"/>
-          <div class="star flexrow">
-            <i class="fa fa-star checked"></i>
-            <i class="fa fa-star checked"></i>
-            <i class="fa fa-star checked"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-    </div> 
-      <h3>П.НоминЭрдэнэ</h3> 
-    </article>
-      
-    <article class="product flexcol">
-      <img src="/assets/budalt-.png" width="100" height="100" alt="budalt"/>
-        <div class="star flexrow">
-          <i class="fa fa-star checked"></i>
-          <i class="fa fa-star checked"></i>
-          <i class="fa fa-star checked"></i>
-          <i class="fa fa-star checked"></i>
-          <i class="fa-regular fa-star"></i>
-</div> 
-    <h3>П.НоминЭрдэнэ</h3> 
-  </article>
-  <article class="product flexcol">
-    <img src="/assets/budalt-.png" width="100" height="100" alt="budalt"/>
-      <div class="star flexrow">
-        <i class="fa fa-star checked"></i>
-        <i class="fa fa-star checked"></i>
-        <i class="fa fa-star checked"></i>
-        <i class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-star"></i>
-      </div> 
-  <h3>П.НоминЭрдэнэ</h3> 
-</article>
-<i class="fa-solid fa-plus"></i>
-    </section></div>
+    <section class="products flexrow" id="products">
+    </section>
+    
+  </div>
     </main>
     <footer>
       <section class="footerContact">

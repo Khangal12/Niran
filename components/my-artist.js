@@ -2,7 +2,7 @@
 class Artist extends HTMLElement {
     constructor() {
         super();
-
+        this.id = this.getAttribute("id")
         this.artist = this.getAttribute("artist");
         this.img = this.getAttribute("img");
         this.year = this.getAttribute("year");
@@ -30,8 +30,8 @@ class Artist extends HTMLElement {
             <p>
               <b>Шагнал:</b> ${this.reward}
             </p>
-            <a href="/Pages/artist.html"><button class="more">Дэлгэрэнгүй</button></a>
-            <a href="/Pages/orders.html"><button class="choise">Сонгох</button></a>
+            <a href="/Pages/artist.html?id=${this.id}"><button class="more">Дэлгэрэнгүй</button></a>
+            <a href="/Pages/orders.html?id=${this.id}"><button class="choise">Сонгох</button></a>
           </article>
         </article>
       </section>`;
