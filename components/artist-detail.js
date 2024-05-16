@@ -11,7 +11,7 @@ class Detail extends HTMLElement{
         this.comment2 = this.getAttribute("comment2");
         this.render();
     }
-    
+    //nomio test
     render() {
         this.innerHTML = `
         <section class="info">
