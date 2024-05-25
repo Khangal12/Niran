@@ -295,7 +295,7 @@ footer {
   justify-content: space-between;
 }
 
-footer>* {
+footer > * {
   margin: 0 5%;
 }
 
@@ -350,13 +350,12 @@ footer>* {
   color: black;
 }
 
-.commentInputField{
+.commentInputField {
   width: 1000px;
 }
-.panel{
+.panel {
   z-index: 1;
 }
-
 @media (max-width: 520px) {
   h2 {
     font-size: 16px;
@@ -448,7 +447,6 @@ footer>* {
     flex-direction: column;
     width: 100%;
   }
-
 }
 
 @media (max-width: 560px) {
@@ -467,7 +465,7 @@ footer>* {
   }
 }
 
-@media(max-width: 560px) {
+@media (max-width: 560px) {
   .flexrow {
     display: flex;
     flex-direction: column;
@@ -489,5 +487,4 @@ footer>* {
     width: 250px;
     height: 250px;
   }
-
 }

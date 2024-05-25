@@ -20,51 +20,48 @@
   <body>
     <my-header></my-header>
     <main>
-        <div id="loginPanel">
-         <div id="close"><i class="fa-solid fa-x"></i></div> 
-            <form id="loginForm">
-              <h1>Login</h1>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button id="btn-submit" type="submit">Нэвтрэх</button>
-            </form>
-            <button id="log-out">
-              Logout
-            </button>
-        </div>
- 
+      <div id="loginPanel">
+        <div id="close"><i class="fa-solid fa-x"></i></div>
+        <form id="loginForm">
+          <h1>Login</h1>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button id="btn-submit" type="submit">Нэвтрэх</button>
+        </form>
+        <button id="log-out">Logout</button>
+      </div>
+
       <div class="mainImg"><img src="/assets/main.svg" /></div>
-      <div class="slideshow-container"> 
+      <div class="slideshow-container">
         <section class="artistImage fade">
-          <img src="/assets/makeup.jpg"  alt="makeup">
-        <button id="mainArtist">Артист мэдээлэл</button>
+          <img src="/assets/makeup.jpg" alt="makeup" />
+          <button id="mainArtist">Артист мэдээлэл</button>
         </section>
         <section class="artistImage fade">
-          <img src="/assets/budalt (10).png" alt="makeup">
-        <button id="mainArtist">Артист мэдээлэл</button>
+          <img src="/assets/budalt (10).png" alt="makeup" />
+          <button id="mainArtist">Артист мэдээлэл</button>
         </section>
         <section class="artistImage fade">
-          <img src="/assets/budalt (9).png"  alt="makeup">
-        <button id="mainArtist">Артист мэдээлэл</button>
+          <img src="/assets/budalt (9).png" alt="makeup" />
+          <button id="mainArtist">Артист мэдээлэл</button>
         </section>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-      <br>
+      <br />
 
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-     
       <section class="mainComment">
         <h2>Хэрэглэгчийн сэтгэгдэл</h2>
         <h3>
@@ -72,231 +69,256 @@
           үйлчилж тэдний сэтгэл ханамжийг ямагт эрхэмлэдэг.
         </h3>
         <section class="comments flexrow">
-          
           <div class="slide fade">
-          <article class="comment">
-            <div class="flexrow">
-              <img src="/assets/budalt (9).png" alt="niran" class="userImg" />
-              <div class="userName">
-                <p>@coco_buyan</p>
-                <h3>Artist Ganjaa</h3>
-                <div class="star">
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa-regular fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
+            <article class="main-comment">
+              <div class="flexrow">
+                <img src="/assets/budalt (9).png" alt="niran" class="userImg" />
+                <div class="userName">
+                  <p>@coco_buyan</p>
+                  <h3>Artist Ganjaa</h3>
+                  <div class="star">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <section class="userComment">
-              <p>
-                Lorem ipsum dolor sit ameght consectetur adipisicing elit. Quia
-                ipsum dicta dolor incidunt temporibus voluptas eos quam quas
-                dolorum. Adipisci, maxime repellendus accusamus aliquid earum
-                est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
-                consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
-                temporibus voluptas eos quam quas dolorum. Adipisci, maxime
-                repellendus accusamus aliquid earum est debitis hic corporis
-                incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
-                elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
-                quam quas dolorum. Adipisci, maxime repellendus accusamus
-                aliquid earum est debitis hic corporis incidunt? Lorem ipsum
-                dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
-                dolor incidunt temporibus voluptas eos quam quas dolorum.
-                Adipisci, maxime repellendus accusamus aliquid earum est debitis
-                hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
-                quid earum est debitis hic corporis incidunt?
-              </p>
-            </section>
-          </article>
-          <article class="comment">
-            <div class="flexrow">
-              <img src="/assets/budalt (11).png" alt="niran" class="userImg" />
-              <div class="userName">
-                <p>@coco_buyan</p>
-                <h3>Artist Ganjaa</h3>
-                <div class="star">
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa-regular fa-star"></i>
+              <section class="userComment">
+                <p>
+                  Lorem ipsum dolor sit ameght consectetur adipisicing elit.
+                  Quia ipsum dicta dolor incidunt temporibus voluptas eos quam
+                  quas dolorum. Adipisci, maxime repellendus accusamus aliquid
+                  earum est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisicing elit. Quia ipsum dicta dolor
+                  incidunt temporibus voluptas eos quam quas dolorum. Adipisci,
+                  maxime repellendus accusamus aliquid earum est debitis hic
+                  corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                  adipisicing elit. Quia ipsum dicta dolor incidunt temporibus
+                  voluptas eos quam quas dolorum. Adipisci, maxime repellendus
+                  accusamus aliquid earum est debitis hic corporis incidunt?
+                  Lorem ipsum dolor sit ameght consectetur adipisicing elit.
+                  Quia ipsum dicta dolor incidunt temporibus voluptas eos quam
+                  quas dolorum. Adipisci, maxime repellendus accusamus aliquid
+                  earum est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur quid earum est debitis hic corporis
+                  incidunt?
+                </p>
+              </section>
+            </article>
+            <article class="main-comment">
+              <div class="flexrow">
+                <img
+                  src="/assets/budalt (11).png"
+                  alt="niran"
+                  class="userImg"
+                />
+                <div class="userName">
+                  <p>@coco_buyan</p>
+                  <h3>Artist Ganjaa</h3>
+                  <div class="star">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
                 </div>
               </div>
-            </div>
-            <section class="userComment">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                ipsum dicta dolor incidunt temporibus voluptas eos quam quas
-                dolorum. Adipisci, maxime repellendus accusamus aliquid earum
-                est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
-                consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
-                temporibus voluptas eos quam quas dolorum. Adipisci, maxime
-                repellendus accusamus aliquid earum est debitis hic corporis
-                incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
-                elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
-                quam quas dolorum. Adipisci, maxime repellendus accusamus
-                aliquid earum est debitis hic corporis incidunt? Lorem ipsum
-                dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
-                dolor incidunt temporibus voluptas eos quam quas dolorum.
-                Adipisci, maxime repellendus accusamus aliquid earum est debitis
-                hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
-                adipisiem ipsum dolor sit ameght consectetur
-              </p>
-            </section>
-          </article>
-           </div>
-          <div class="slide fade">
-          <article class="comment">
-            <div class="flexrow">
-              <img src="/assets/budalt (10).png" alt="niran" class="userImg" />
-              <div class="userName">
-                <p>@coco_buyan</p>
-                <h3>Artist Ganjaa</h3>
-                <div class="star">
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa-regular fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <section class="userComment">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                ipsum dicta dolor incidunt temporibus voluptas eos quam quas
-                dolorum. Adipisci, maxime repellendus accusamus aliquid earum
-                est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
-                consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
-                temporibus voluptas eos quam quas dolorum. Adipisci, maxime
-                repellendus accusamus aliquid earum est debitis hic corporis
-                incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
-                elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
-                quam quas dolorum. Adipisci, maxime repellendus accusamus
-                aliquid earum est debitis hic corporis incidunt? Lorem ipsum
-                dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
-                dolor incidunt temporibus voluptas eos quam quas dolorum.
-                Adipisci, maxime repellendus accusamus aliquid earum est debitis
-                hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
-                adipisiem ipsum dolor sit ameght consectetur
-              </p>
-            </section>
-          </article>
-          <article class="comment">
-            <div class="flexrow">
-              <img src="/assets/budalt (10).png" alt="niran" class="userImg" />
-              <div class="userName">
-                <p>@coco_buyan</p>
-                <h3>Artist Ganjaa</h3>
-                <div class="star">
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa fa-star checked"></i>
-                  <i class="fa-regular fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <section class="userComment">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                ipsum dicta dolor incidunt temporibus voluptas eos quam quas
-                dolorum. Adipisci, maxime repellendus accusamus aliquid earum
-                est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
-                consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
-                temporibus voluptas eos quam quas dolorum. Adipisci, maxime
-                repellendus accusamus aliquid earum est debitis hic corporis
-                incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
-                elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
-                quam quas dolorum. Adipisci, maxime repellendus accusamus
-                aliquid earum est debitis hic corporis incidunt? Lorem ipsum
-                dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
-                dolor incidunt temporibus voluptas eos quam quas dolorum.
-                Adipisci, maxime repellendus accusamus aliquid earum est debitis
-                hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
-                adipisiem ipsum dolor sit ameght consectetur
-              </p>
-            </section>
-          </article>
-            </div>
-          <div class="slide fade">
-        <article class="comment">
-          <div class="flexrow">
-            <img src="/assets/budalt (10).png" alt="niran" class="userImg" />
-            <div class="userName">
-              <p>@coco_buyan</p>
-              <h3>Artist Ganjaa</h3>
-              <div class="star">
-                <i class="fa fa-star checked"></i>
-                <i class="fa fa-star checked"></i>
-                <i class="fa fa-star checked"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
+              <section class="userComment">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+                  dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+                  est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisicing elit. Quia ipsum dicta dolor
+                  incidunt temporibus voluptas eos quam quas dolorum. Adipisci,
+                  maxime repellendus accusamus aliquid earum est debitis hic
+                  corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                  adipisicing elit. Quia ipsum dicta dolor incidunt temporibus
+                  voluptas eos quam quas dolorum. Adipisci, maxime repellendus
+                  accusamus aliquid earum est debitis hic corporis incidunt?
+                  Lorem ipsum dolor sit ameght consectetur adipisicing elit.
+                  Quia ipsum dicta dolor incidunt temporibus voluptas eos quam
+                  quas dolorum. Adipisci, maxime repellendus accusamus aliquid
+                  earum est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisiem ipsum dolor sit ameght
+                  consectetur
+                </p>
+              </section>
+            </article>
           </div>
-          <section class="userComment">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-              ipsum dicta dolor incidunt temporibus voluptas eos quam quas
-              dolorum. Adipisci, maxime repellendus accusamus aliquid earum
-              est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
-              consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
-              temporibus voluptas eos quam quas dolorum. Adipisci, maxime
-              repellendus accusamus aliquid earum est debitis hic corporis
-              incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
-              elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
-              quam quas dolorum. Adipisci, maxime repellendus accusamus
-              aliquid earum est debitis hic corporis incidunt? Lorem ipsum
-              dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
-              dolor incidunt temporibus voluptas eos quam quas dolorum.
-              Adipisci, maxime repellendus accusamus aliquid earum est debitis
-              hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
-              adipisiem ipsum dolor sit ameght consectetur
-            </p>
-          </section>
-        </article>
-        <article class="comment">
-          <div class="flexrow">
-            <img src="/assets/budalt (10).png" alt="niran" class="userImg" />
-            <div class="userName">
-              <p>@coco_buyan</p>
-              <h3>Artist Ganjaa</h3>
-              <div class="star">
-                <i class="fa fa-star checked"></i>
-                <i class="fa fa-star checked"></i>
-                <i class="fa fa-star checked"></i>
-                <i class="fa fa-star checked"></i>
-                <i class="fa-regular fa-star"></i>
-            </div>
-            </div>
+          <div class="slide fade">
+            <article class="main-comment">
+              <div class="flexrow">
+                <img
+                  src="/assets/budalt (10).png"
+                  alt="niran"
+                  class="userImg"
+                />
+                <div class="userName">
+                  <p>@coco_buyan</p>
+                  <h3>Artist Ganjaa</h3>
+                  <div class="star">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <section class="userComment">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+                  dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+                  est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisicing elit. Quia ipsum dicta dolor
+                  incidunt temporibus voluptas eos quam quas dolorum. Adipisci,
+                  maxime repellendus accusamus aliquid earum est debitis hic
+                  corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                  adipisicing elit. Quia ipsum dicta dolor incidunt temporibus
+                  voluptas eos quam quas dolorum. Adipisci, maxime repellendus
+                  accusamus aliquid earum est debitis hic corporis incidunt?
+                  Lorem ipsum dolor sit ameght consectetur adipisicing elit.
+                  Quia ipsum dicta dolor incidunt temporibus voluptas eos quam
+                  quas dolorum. Adipisci, maxime repellendus accusamus aliquid
+                  earum est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisiem ipsum dolor sit ameght
+                  consectetur
+                </p>
+              </section>
+            </article>
+            <article class="main-comment">
+              <div class="flexrow">
+                <img
+                  src="/assets/budalt (10).png"
+                  alt="niran"
+                  class="userImg"
+                />
+                <div class="userName">
+                  <p>@coco_buyan</p>
+                  <h3>Artist Ganjaa</h3>
+                  <div class="star">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <section class="userComment">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+                  dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+                  est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisicing elit. Quia ipsum dicta dolor
+                  incidunt temporibus voluptas eos quam quas dolorum. Adipisci,
+                  maxime repellendus accusamus aliquid earum est debitis hic
+                  corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                  adipisicing elit. Quia ipsum dicta dolor incidunt temporibus
+                  voluptas eos quam quas dolorum. Adipisci, maxime repellendus
+                  accusamus aliquid earum est debitis hic corporis incidunt?
+                  Lorem ipsum dolor sit ameght consectetur adipisicing elit.
+                  Quia ipsum dicta dolor incidunt temporibus voluptas eos quam
+                  quas dolorum. Adipisci, maxime repellendus accusamus aliquid
+                  earum est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisiem ipsum dolor sit ameght
+                  consectetur
+                </p>
+              </section>
+            </article>
           </div>
-          <section class="userComment">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-              ipsum dicta dolor incidunt temporibus voluptas eos quam quas
-              dolorum. Adipisci, maxime repellendus accusamus aliquid earum
-              est debitis hic corporis incidunt? Lorem ipsum dolor sit ameght
-              consectetur adipisicing elit. Quia ipsum dicta dolor incidunt
-              temporibus voluptas eos quam quas dolorum. Adipisci, maxime
-              repellendus accusamus aliquid earum est debitis hic corporis
-              incidunt? Lorem ipsum dolor sit ameght consectetur adipisicing
-              elit. Quia ipsum dicta dolor incidunt temporibus voluptas eos
-              quam quas dolorum. Adipisci, maxime repellendus accusamus
-              aliquid earum est debitis hic corporis incidunt? Lorem ipsum
-              dolor sit ameght consectetur adipisicing elit. Quia ipsum dicta
-              dolor incidunt temporibus voluptas eos quam quas dolorum.
-              Adipisci, maxime repellendus accusamus aliquid earum est debitis
-              hic corporis incidunt? Lorem ipsum dolor sit ameght consectetur
-              adipisiem ipsum dolor sit ameght consectetur
-            </p>
-          </section>
-        </article>
-            </div>
-         </section>
+          <div class="slide fade">
+            <article class="main-comment">
+              <div class="flexrow">
+                <img
+                  src="/assets/budalt (10).png"
+                  alt="niran"
+                  class="userImg"
+                />
+                <div class="userName">
+                  <p>@coco_buyan</p>
+                  <h3>Artist Ganjaa</h3>
+                  <div class="star">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <section class="userComment">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+                  dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+                  est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisicing elit. Quia ipsum dicta dolor
+                  incidunt temporibus voluptas eos quam quas dolorum. Adipisci,
+                  maxime repellendus accusamus aliquid earum est debitis hic
+                  corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                  adipisicing elit. Quia ipsum dicta dolor incidunt temporibus
+                  voluptas eos quam quas dolorum. Adipisci, maxime repellendus
+                  accusamus aliquid earum est debitis hic corporis incidunt?
+                  Lorem ipsum dolor sit ameght consectetur adipisicing elit.
+                  Quia ipsum dicta dolor incidunt temporibus voluptas eos quam
+                  quas dolorum. Adipisci, maxime repellendus accusamus aliquid
+                  earum est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisiem ipsum dolor sit ameght
+                  consectetur
+                </p>
+              </section>
+            </article>
+            <article class="main-comment">
+              <div class="flexrow">
+                <img
+                  src="/assets/budalt (10).png"
+                  alt="niran"
+                  class="userImg"
+                />
+                <div class="userName">
+                  <p>@coco_buyan</p>
+                  <h3>Artist Ganjaa</h3>
+                  <div class="star">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <section class="userComment">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  ipsum dicta dolor incidunt temporibus voluptas eos quam quas
+                  dolorum. Adipisci, maxime repellendus accusamus aliquid earum
+                  est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisicing elit. Quia ipsum dicta dolor
+                  incidunt temporibus voluptas eos quam quas dolorum. Adipisci,
+                  maxime repellendus accusamus aliquid earum est debitis hic
+                  corporis incidunt? Lorem ipsum dolor sit ameght consectetur
+                  adipisicing elit. Quia ipsum dicta dolor incidunt temporibus
+                  voluptas eos quam quas dolorum. Adipisci, maxime repellendus
+                  accusamus aliquid earum est debitis hic corporis incidunt?
+                  Lorem ipsum dolor sit ameght consectetur adipisicing elit.
+                  Quia ipsum dicta dolor incidunt temporibus voluptas eos quam
+                  quas dolorum. Adipisci, maxime repellendus accusamus aliquid
+                  earum est debitis hic corporis incidunt? Lorem ipsum dolor sit
+                  ameght consectetur adipisiem ipsum dolor sit ameght
+                  consectetur
+                </p>
+              </section>
+            </article>
+          </div>
+        </section>
       </section>
       <section class="company flexrow">
         <div class="flexcol">
@@ -346,7 +368,7 @@
       </div>
     </footer>
   </body>
-  
+
   <script src="/scripts/autoshow-comment.js"></script>
   <script src="/scripts/slideshow.js"></script>
   <script type="module" src="/components/my-star.js"></script>
