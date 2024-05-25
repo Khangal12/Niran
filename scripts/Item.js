@@ -1,5 +1,7 @@
 export default class Item {
+  //baiguulagch
   constructor(itemObj) {
+    
     this.artist = itemObj.artist;
     this.img = itemObj.img;
     this.type = itemObj.type;
