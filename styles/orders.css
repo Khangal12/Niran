@@ -95,7 +95,6 @@
   }
 }
 
-
 .product {
   gap: 10px;
 
@@ -126,6 +125,16 @@
   & h1.title {
     margin-left: 7%;
   }
+}
+button:hover select {
+  background-color: inherit;
+  color: var(--color-footer-bg);
+}
+select {
+  background-color: var(--color-footer-bg);
+  border: none;
+  font-size: var(--font-btn);
+  color: white;
 }
 
 @media (max-width: 520px) {
@@ -224,7 +233,6 @@
 }
 
 @media (min-width: 768px) {
-
   /* Navbar */
   .navbar .nav-links li {
     margin-right: 50px;
@@ -263,7 +271,6 @@
 }
 
 @media (min-width: 1024px) {
-
   /* Navbar */
   .navbar .nav-links li {
     margin-right: 70px;
@@ -343,5 +350,4 @@
     flex-direction: column;
     width: 100%;
   }
-  
 }

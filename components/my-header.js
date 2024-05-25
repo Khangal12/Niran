@@ -1,11 +1,11 @@
 class Header extends HTMLElement {
   constructor() {
-      super();
-      this.render();
+    super();
+    this.render();
   }
 
   render() {
-      this.innerHTML = `
+    this.innerHTML = `
       <header>
       <div class="header-search flexrow">
         <a href="/Pages/main.html">
@@ -20,7 +20,6 @@ class Header extends HTMLElement {
           <input class="search" placeholder="Search" />
           <i class="icon-search"></i>
         </div>
-
         <a id="showLoginBtn"><i class="fa-regular fa-user"></i></a>
       </div>
       <div class="line"></div>
@@ -47,28 +46,67 @@ class Header extends HTMLElement {
             </ul>
           </li>
         </ul>
+        <div class="last">
+        <i class="fa-solid fa-cart-shopping" id="cartIcon"></i>
         <a href="/Pages/order.html" class="order-button">Захиалга</a>
+        </div>
       </nav>
+      <div id="loginPanel">
+        <div id="close"><i class="fa-solid fa-x"></i></div>
+        <form id="loginForm">
+          <h1>Login</h1>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button id="btn-submit" type="submit">Нэвтрэх</button>
+        </form>
+        <button id="log-out" class="log-out">Logout</button>
+      </div>
+      <div id="cartPanel" class="cart-panel">
+  <div class="cart-items">
+  <div class="flexcol">
+    <h3>
+    Таны сонгосон цаг:
+    </h3>
+    
+</div>
+</div>
+
     </header>
-      `;
+    `;
   }
-
-  showLoginBtn() {
-      const loginPanel = document.getElementById("loginPanel");
-      loginPanel.classList.toggle("show");
-  }
-
   connectedCallback() {
-      // Add event listener for showing login panel
-      const showLoginBtn = this.querySelector("#showLoginBtn");
-      showLoginBtn.addEventListener("click", () => this.showLoginBtn());
+    // Add event listener for showing login panel
+    const showLoginBtn = this.querySelector("#showLoginBtn");
+    showLoginBtn.addEventListener("click", () => this.showLoginPanel());
 
-      // Add event listener for closing login panel
-      const closeButton = document.getElementById("close");
-      closeButton.addEventListener('click', () => {
-          const loginPanel = document.getElementById("loginPanel");
-          loginPanel.classList.remove("show");
-      });
+    // Add event listener for toggling the cart panel
+    const cartIcon = this.querySelector("#cartIcon");
+    cartIcon.addEventListener("click", () => this.toggleCartPanel());
+
+    // Add event listener for closing login panel
+    const closeButton = this.querySelector("#close");
+    closeButton.addEventListener("click", () => this.hideLoginPanel());
+  }
+
+  showLoginPanel() {
+    const loginPanel = this.querySelector("#loginPanel");
+    loginPanel.classList.toggle("show");
+  }
+
+  hideLoginPanel() {
+    const loginPanel = this.querySelector("#loginPanel");
+    loginPanel.classList.remove("show");
+  }
+
+  toggleCartPanel() {
+    const cartPanel = this.querySelector("#cartPanel");
+    cartPanel.classList.toggle("show");
   }
 }
 
