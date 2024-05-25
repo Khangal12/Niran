@@ -2,7 +2,7 @@
     "record":{
     "products": [
     {
-        "id":"Nomio",
+        "id":"1",
         "artist": "Номин-Эрдэнэ",
         "img": "/assets/budalt (4).png",
         "year": "10",
@@ -26,7 +26,7 @@
         ]
     },
     {
-        "id":"khangal",
+        "id":"2",
         "artist": "Хангал",
         "img": "/assets/budalt (11).png",
         "year": "5",
@@ -50,7 +50,7 @@
         ]
     },
     {
-        "id":"zaya",
+        "id":"3",
         "artist": "Заяа",
         "img": "/assets/budalt (5).png",
         "year": "4",

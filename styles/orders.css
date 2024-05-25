@@ -78,6 +78,10 @@
     transition: all 0.3s ease;
   }
 }
+.selected {
+  background-color: #cce5ff;
+  border: 1px solid #004085;
+}
 
 /*products*/
 .products {

@@ -350,6 +350,13 @@ footer>* {
   color: black;
 }
 
+.commentInputField{
+  width: 1000px;
+}
+.panel{
+  z-index: 1;
+}
+
 @media (max-width: 520px) {
   h2 {
     font-size: 16px;
