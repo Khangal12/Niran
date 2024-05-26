@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Components with Template Slots</title>
+<style>
+  .container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    background-color: black;
+    color: aqua;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Define a template -->
+<template id="custom-element-template">
+  <div class="container">
+    <!-- Define a slot with the name "content" -->
+    <slot name="content">  </slot>
+  </div>
+</template>
+
+<!-- Stamp out an instance of the custom element -->
+<custom-element>
+  <p slot="content">hello world</p>
+  <p slot="content">This content is provided from the outside.</p>
+  <p slot="content">This content is provided from the outside.</p>
+  <p slot="content">This content is provided from the outside.</p>
+</custom-element>
+
+<script>
+// Retrieve the template
+const template = document.getElementById('custom-element-template');
+
+// Define a new custom element
+class CustomElement extends HTMLElement {
+  constructor() {
+    super();
+
+    // Create a Shadow DOM
+    const shadow = this.attachShadow({mode: 'open'});
+
+    // Clone the template content
+    const instance = template.content.cloneNode(true);
+
+    // Append the template content to the Shadow DOM
+    shadow.appendChild(instance);
+  }
+}
+
+// Define the custom element in the custom registry
+customElements.define('custom-element', CustomElement);
+</script>
+<style>
+   
+</style>
+</body>
+</html>

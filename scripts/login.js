@@ -2,6 +2,8 @@ const loginForm = document.getElementById("loginForm");
 const loginBody = document.getElementById("loginPanel");
 const logout = document.getElementById("log-out");
 loginForm.addEventListener("submit", async (event) => {
+
+    console.log("bataa")
     event.preventDefault();
 
     const username = document.getElementById("username").value;

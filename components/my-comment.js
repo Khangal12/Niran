@@ -72,6 +72,10 @@ class Comment extends HTMLElement {
             return;
           } else {
             alert("Comment successful");
+            this.dispatchEvent(new CustomEvent('commentsFetched', {
+              bubbles: true,
+              composed: true
+            }));
           }
         } else {
           alert("Login first");

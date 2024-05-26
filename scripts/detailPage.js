@@ -7,6 +7,7 @@ class Orders {
 
             const rs = await fetch('/scripts/artist.json');
             const response = await rs.json()
+            console.log(response)
             const products = response.record.products
 
            

@@ -82,20 +82,22 @@ class OrderPay extends HTMLElement {
 
       // get hisni daraa resetleh uchirni umnuh disabled blsonni haragdan
       this.resetHourButtons();
+
+      // 
       this.disableHourButtons(orders);
     } catch (error) {
       console.error("Error fetching orders:", error.message);
       // Handle the error
     }
   }
-//reset hih function
+
   resetHourButtons() {
     this.querySelectorAll(".order-hour").forEach((button) => {
       button.disabled = false;
       button.classList.remove("disabled");
     });
   }
-//tsag zahialagdsan tohioldold tuunig disable class nemj haruulah
+
   disableHourButtons(orders) {
     orders.forEach(order => {
       const hourButton = this.querySelector(`.order-hour[value="${order.hour_id}"]`);
