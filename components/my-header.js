@@ -1,3 +1,4 @@
+import '../scripts/cart.js'
 class Header extends HTMLElement {
   constructor() {
     super();
@@ -54,13 +55,13 @@ class Header extends HTMLElement {
       <div id="loginPanel">
         <div id="close"><i class="fa-solid fa-x"></i></div>
         <form id="loginForm">
-          <h1>Login</h1>
+          <h1>Нэвтрэх хэсэг</h1>
           <div class="form-group">
-            <label for="username">Username</label>
+            <label for="username">Нэр</label>
             <input type="text" id="username" name="username" required />
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password">Нууц үг</label>
             <input type="password" id="password" name="password" required />
           </div>
           <button id="btn-submit" type="submit">Нэвтрэх</button>
@@ -69,12 +70,11 @@ class Header extends HTMLElement {
       </div>
       <div id="cartPanel" class="cart-panel">
   <div class="cart-items">
-  <div class="flexcol">
     <h3>
     Таны сонгосон цаг:
     </h3>
-    
-</div>
+    <div id="cartbody">
+    </div>
 </div>
 
     </header>
@@ -92,11 +92,27 @@ class Header extends HTMLElement {
     // Add event listener for closing login panel
     const closeButton = this.querySelector("#close");
     closeButton.addEventListener("click", () => this.hideLoginPanel());
+
+    // Add event listener for clicks outside of panels
+    document.addEventListener("click", (event) => {
+      const loginPanel = this.querySelector("#loginPanel");
+      const cartPanel = this.querySelector("#cartPanel");
+
+      // Check if the click is outside of the login panel
+      if (!loginPanel.contains(event.target) && !showLoginBtn.contains(event.target)) {
+        this.hideLoginPanel();
+      }
+
+      // Check if the click is outside of the cart panel
+      if (!cartPanel.contains(event.target) && !cartIcon.contains(event.target)) {
+        this.hideCartPanel();
+      }
+    });
   }
 
   showLoginPanel() {
     const loginPanel = this.querySelector("#loginPanel");
-    loginPanel.classList.toggle("show");
+    loginPanel.classList.add("show");
   }
 
   hideLoginPanel() {
@@ -107,6 +123,11 @@ class Header extends HTMLElement {
   toggleCartPanel() {
     const cartPanel = this.querySelector("#cartPanel");
     cartPanel.classList.toggle("show");
+  }
+
+  hideCartPanel() {
+    const cartPanel = this.querySelector("#cartPanel");
+    cartPanel.classList.remove("show");
   }
 }
 

@@ -1,4 +1,5 @@
 import "./my-comment.js";
+import "./comment.js";
 class Detail extends HTMLElement {
   constructor() {
     super();
@@ -8,9 +9,33 @@ class Detail extends HTMLElement {
     this.year = this.getAttribute("year");
     this.reward = this.getAttribute("reward");
     this.count = this.getAttribute("count");
-    this.comment1 = this.getAttribute("comment1");
-    this.comment2 = this.getAttribute("comment2");
     this.render();
+    this.fetchComments();
+  }
+  async fetchComments() {
+    try {
+      const response = await fetch(`http://127.0.0.1:3000/getcomment/${this.id}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch comments');
+      }
+      const comments = await response.json();
+      this.renderComments(comments);
+    } catch (error) {
+      console.error('Error fetching comments:', error.message);
+    }
+  }
+
+  renderComments(comments) {
+    const commentContainer = this.querySelector(".comment");
+  
+    commentContainer.innerHTML = '';
+    comments.forEach(comment => {
+      const commentDate = new Date(comment.commented_date);
+    const formattedDate = commentDate.toLocaleDateString(); 
+      commentContainer.innerHTML += `
+        <test-comment artistId="${this.artistId}" name="${comment.user_name}" count="${comment.star_count}" text="${comment.comment_text}" date="${formattedDate}"></test-comment>
+      `;
+    });
   }
 
   render() {
@@ -33,57 +58,7 @@ class Detail extends HTMLElement {
               <p><bold>Туршлага:</bold>${this.year} жил</p>
               <p><bold>Шагнал:</bold>${this.reward}</p>
               <article class="comment">
-                  <h3>Сэтгэгдэл</h3>
-                  <div class="user flexrow">
-                      <p>user-2024-03-20</p>
-                      <div class="star">
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa-regular fa-star"></i>
-                      </div>
-                  </div>
-                  <p>${this.comment1}</p>
-                  <hr/>
-                  <div class="user flexrow">
-                      <p>user-2024-03-20</p>
-                      <div class="star">
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                      </div>
-                  </div>
-                  <p>${this.comment2}</p>
-                  <hr />
-                  <div class="user flexrow">
-                      <p>user-2024-03-20</p>
-                      <div class="star">
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                      </div>
-                  </div>
-                  <p>${this.comment2}</p>
-                  <hr />
-                  <div class="user flexrow">
-                      <p>user-2024-03-20</p>
-                      <div class="star">
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                          <i class="fa fa-star checked"></i>
-                      </div>
-                  </div>
-                  <p>${this.comment2}</p>
-                  <hr />
-                  
-                  
+                 
               </article>
               <section class="orderButton flexrow">
                       <button class="mainArtist" id="comment_btn">Сэтгэгдэл өгөх</button>
@@ -99,22 +74,13 @@ class Detail extends HTMLElement {
     const showCommentButton = this.querySelector("#comment_btn");
     const panel = this.querySelector("#panel");
     showCommentButton.addEventListener("click", () => this.showComment());
-    document.addEventListener("click", this.handleClickOutside); // Listen for clicks outside the detail element
+    document.addEventListener("click", this.handleClickOutside); 
   }
 
   showComment() {
     const commentPanel = document.querySelector("#panel");
     commentPanel.classList.toggle("show");
   }
-
-  handleClickOutside(event) {
-    const commentPanel = document.querySelector("#panel");
-    if (!commentPanel.classList.contains("hidden")) {
-      // Check if clicked outside the panel and detail element
-      commentPanel.classList.add("hidden");
-    }
-  }
-
   disconnectedCallback() {
     document.removeEventListener("click", this.handleClickOutside); // Remove event listener on disconnect
   }

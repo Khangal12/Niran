@@ -12,7 +12,6 @@ class Star extends HTMLElement {
             </div>
         `;
   }
-
   generateStars() {
     let starsHtml = "";
     for (let i = 0; i < 5; i++) {

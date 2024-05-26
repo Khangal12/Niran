@@ -69,20 +69,21 @@ app.post("/order", async (req, res) => {
         });
     }
 });
-app.post("/comment/:id" , async (req,res)=>{
+app.post("/comment/:aritsId" , async (req,res)=>{
     try{
-    const artistID = req.params.id;
-    const {user_id,comment_text,comment_date,star_count} = req.body;
+    const artistID = req.params.aritsId;
+    const {user_id,comment_text,commented_date,star_count} = req.body;
     const query=`insert into public."Comment" (artist_id,user_id,comment_text,commented_date,star_count)
     values ($1,$2,$3,$4,$5)
     returning *;
     `;
-    const result = await pool.query(query,[artistID,user_id,comment_text,comment_date,star_count]);
+    const result = await pool.query(query,[artistID,user_id,comment_text,commented_date,star_count]);
     res.status(201).json({
         message: "Comment created successfully",
         order: result.rows[0]
     });
 }
+
 catch (error) {
     console.error("Error creating comment:", error);
     res.status(500).json({
@@ -90,7 +91,60 @@ catch (error) {
         error: error.message
     });
 }})
-
+app.get("/getcomment/:artistId", (req, res) => {
+    const artistId = req.params.artistId;
+  
+    pool.query(
+      `SELECT c.comment_text, c.commented_date, c.star_count, u.user_name
+       FROM public."Comment" c
+       INNER JOIN public."User" u ON c.user_id = u.user_id
+       WHERE c.artist_id = $1
+       ORDER BY c.commented_date DESC;`,
+      [artistId],
+      (err, result) => {
+        if (err) {
+          res.status(500).send("Internal server error");
+          return;
+        }
+        res.json(result.rows);
+      }
+    );
+  });
+  app.get('/getorder/:artistId/:selectedDay', (req, res) => {
+    const artistId = req.params.artistId;
+    const selectedDay = req.params.selectedDay;
+    pool.query(
+      `SELECT hour_id FROM public."Order" WHERE day_id = $1 AND artist_id = $2`,
+      [selectedDay, artistId],
+      (err, result) => {
+        if (err) {
+          console.error('Error fetching orders:', err);
+          res.status(500).send('Internal server error');
+          return;
+        }
+        res.json(result.rows);
+      }
+    );
+  });
+  app.get(`/getorder/:userId`,(req,res)=>{
+    const userId = req.params.userId;
+    pool.query(
+        `SELECT a.artist ,a.img, h.hour_time , d.day_name , o.order_date
+        FROM public."Order" o
+        INNER JOIN public."HourTable" h ON o.hour_id = h.hour_id
+        INNER JOIN public."Days" d ON o.day_id = d.day_id
+        inner join public."Artist" a on o.artist_id = a.id
+        where o.user_id=$1;
+        `,[userId],(err,result)=>{
+          if(err){
+            console.error('Error fetching order:',err);
+            res.status(500).send('Internal server error');
+            return;
+          }
+          res.json(result.rows)
+        }
+    )
+  })
 // Server Listener
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

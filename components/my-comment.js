@@ -47,7 +47,8 @@ class Comment extends HTMLElement {
 
     commentBtn.addEventListener("click", async () => {
       const commentValue = inputComment.value;
-
+      const activeStars = document.querySelectorAll(".stars .active").length;
+      console.log(activeStars)
       try {
         const userId = localStorage.getItem("userId");
         if (userId) {
@@ -61,8 +62,8 @@ class Comment extends HTMLElement {
               body: JSON.stringify({
                 user_id: userId,
                 comment_text: commentValue,
+                commented_date: new Date().toISOString(),
                 star_count: activeStars,
-                commented_date: new Date(),
               }),
             }
           );

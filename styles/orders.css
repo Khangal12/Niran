@@ -136,6 +136,11 @@ select {
   font-size: var(--font-btn);
   color: white;
 }
+.order-hour.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 
 @media (max-width: 520px) {
   h2 {

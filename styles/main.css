@@ -8,6 +8,7 @@
   --color-logo: #fdfdff;
   --color-main-bg: #250b14;
   --color-comment: #f5e3ea;
+  --color-dark:#000000;
   --font-regular: 20px;
   --font-small: 16px;
   --font-big: 30px;
@@ -170,8 +171,47 @@ i.fa-user {
   /* Add other styling properties as needed */
 }
 .cart-items {
-  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px;
 }
+/* CSS styles for the cart item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+.order-item{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 1rem;
+}
+/* CSS styles for the cart image */
+.cart-img {
+  width: 100px; /* Adjust width as needed */
+  height: auto;
+  border-radius: 50px;
+}
+
+/* CSS styles for the cart item details */
+.cart-details {
+  flex-grow: 1;
+}
+
+/* CSS styles for the order information */
+.order-info p {
+  margin: 5px 0;
+}
+
+/* CSS styles for the order date */
+.order-date {
+  font-style: italic;
+  color: #888;
+}
+
 
 .cart-panel.show {
   transform: translateX(-100%); /* Slide in from the right */
@@ -180,7 +220,8 @@ i.fa-user {
   width: 100px;
   font-size: 15px;
   height: 30px;
-  margin-top: 10rem;
+  margin-top: 60vh;
+  margin-left: 10px;
 }
 .navbar {
   background-color: var(--color-bg);
@@ -794,7 +835,7 @@ button[type="submit"]:hover {
 }
 .give-comment .fa-star.active {
   color: var(--color-footer-bg);
-  background-color: var(--color-bg);
+  background-color: var(--color-comment);
 }
 
 /* For screens smaller than 768px */
@@ -997,5 +1038,95 @@ button[type="submit"]:hover {
   .small-main-makeup h3 {
     font-size: 20px;
     font-weight: 500;
+  }
+}
+/*animation*/
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%); /* Start off the screen on the left */
+  }
+  to {
+    transform: translateX(0); /* Slide in to the original position */
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Start off the screen on the right */
+  }
+  to {
+    transform: translateX(0); /* Slide in to the original position */
+  }
+}
+
+.left-comment {
+  animation: slideInLeft 5s ease-in-out; /* Apply slideInLeft animation */
+}
+
+.right-comment {
+  animation: slideInRight 5s ease-in-out; /* Apply slideInRight animation */
+}
+@media(prefers-color-scheme:dark){
+  body{
+    background-color: var(--color-dark);
+    color: white;
+  }
+  button{
+    background-color: white;
+    color: var(--color-dark);
+  }
+  header{
+    & .header-search{
+      &.search-bar{
+        background-color: var(--color-dark);
+      }
+      background-color: var(--color-dark);
+    }
+   
+  }
+  .navbar{
+    background-color: var(--color-dark);
+    & .nav-links{
+      li a{
+        color: white;
+      }
+    }
+  }
+  input.search{
+    background-color: white;
+    border-color: #000000;
+  }
+  footer{
+    background-color: var(--color-dark);
+    border: var(--color-comment) 1px solid;
+  }
+  .userComment p{
+    color: white;
+ 
+  }
+  i.fa-regular.fa-user{
+    color: white;
+
+  }
+  main{
+    background-color: var(--color-dark);
+  }
+  button.order-hour{
+    color: var(--color-dark) !important;
+  }
+  select.day-options{
+    color: #000000;
+    background-color: white;
+  }
+  .verify-btn{
+    color: var(--color-dark) !important;
+ 
+  }
+  .star i.fa.fa-star.checked{
+    color:white !important;
+  }
+  .dropdown-content{
+    background-color: var(--color-dark);
+    
   }
 }
