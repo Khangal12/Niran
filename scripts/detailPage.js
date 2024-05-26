@@ -15,7 +15,7 @@ class Orders {
             const ProductsContainer = document.getElementById("products")
             if(idParam){    
                 const filtered = products.find((item) => item.id == idParam);
-                artistsContainer.innerHTML = `<my-detail id="${filtered.id}" artist="${filtered.artist}" img="${filtered.img}" year="${filtered.year}" reward="${filtered.reward}" count="${filtered.count}" comment1="${filtered.comment1}" comment2="${filtered.comment2}"></my-detail> `
+                artistsContainer.innerHTML = `<my-detail id="${filtered.id}" artist="${filtered.artist}" img="${filtered.img}" year="${filtered.year}" reward="${filtered.reward}" count="${filtered.count}""></my-detail> `
                 filtered.makeup.map(item => {
                     ProductsContainer.innerHTML += `<artist-product id="${filtered.id}" artist="${filtered.artist}" img="${item.img}" count="${item.count}"></artist-product>`;
                 });

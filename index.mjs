@@ -33,13 +33,8 @@ app.get("/", (req, res) => {
 app.post("/login", async (req, res) => {
     try {
         const { email, pwd } = req.body;
-
-        const result = await pool.query(`SELECT * FROM public."User" WHERE user_name = $1`, [email]);
+        const result = await pool.query(`SELECT * FROM public."User" WHERE user_name = $1 and user_pwd = $2`, [email,pwd]);
         const user = result.rows[0];
-        
-        if (!user || pwd !== user.user_pwd) {
-            return res.status(400).json({ message: "Please check your email or password" });
-        }
         res.json({ user_id: user.user_id });
     } catch (error) {
         console.error("Error during login:", error);
