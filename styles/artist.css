@@ -46,7 +46,7 @@ button {
   background-color: var(--color-footer-bg);
 }
 
-h1 {
+.title {
   font-weight: 800;
   font-size: var(--font-btn);
   padding-left: 4em;
