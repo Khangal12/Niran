@@ -4,7 +4,6 @@ class Star extends HTMLElement {
     this.count = parseInt(this.getAttribute("count"));
     this.render();
   }
-
   render() {
     this.innerHTML = `
             <div class="star">

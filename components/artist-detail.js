@@ -13,7 +13,6 @@ class Detail extends HTMLElement {
     this.render();
     this.fetchComments();
   }
-
   async fetchComments() {
     try {
       const response = await fetch(`http://127.0.0.1:3000/getcomment/${this.id}`);
@@ -26,7 +25,6 @@ class Detail extends HTMLElement {
       console.error('Error fetching comments:', error.message);
     }
   }
-
   renderComments(comments) {
     const commentContainer = this.querySelector(".comment");
     commentContainer.innerHTML = '';
@@ -38,7 +36,6 @@ class Detail extends HTMLElement {
       `;
     });
   }
-
   render() {
     this.innerHTML = `
       <section class="info">
@@ -69,19 +66,16 @@ class Detail extends HTMLElement {
         <my-comment id="${this.id}"></my-comment>
       </div>
     `;
-
     const showCommentButton = this.querySelector("#comment_btn");
     const panel = this.querySelector("#panel");
     showCommentButton.addEventListener("click", () => this.showComment());
     this.querySelector("my-comment").addEventListener("commentsFetched", () => this.fetchComments());
     document.addEventListener("click", this.handleClickOutside.bind(this));
   }
-
   showComment() {
     const commentPanel = this.querySelector("#panel");
     commentPanel.classList.toggle("show");
   }
-
   handleClickOutside(event) {
     const panel = this.querySelector("#panel");
     const showCommentButton = this.querySelector("#comment_btn");

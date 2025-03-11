@@ -24,7 +24,6 @@ class OrderPage {
         }
     }
 }
-
 (async () => {
   const order = new OrderPage();
   await order.Init();

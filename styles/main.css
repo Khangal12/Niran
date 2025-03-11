@@ -8,7 +8,7 @@
   --color-logo: #fdfdff;
   --color-main-bg: #250b14;
   --color-comment: #f5e3ea;
-  --color-dark:#000000;
+  --color-dark: #000000;
   --font-regular: 20px;
   --font-small: 16px;
   --font-big: 30px;
@@ -149,6 +149,7 @@ i.fa-user {
   border-bottom: 1px solid black;
   margin: 5px 0 10px 0;
 }
+
 .cart-panel {
   display: none;
 }
@@ -156,25 +157,33 @@ i.fa-user {
 .cart-panel.show {
   display: block;
 }
+
 .cart-panel {
   position: fixed;
   top: 0;
-  right: -400px; /* Initially hidden to the right */
-  width: 100%; /* Adjust according to your design */
+  right: -400px;
+  /* Initially hidden to the right */
+  width: 100%;
+  /* Adjust according to your design */
   height: 200px;
   max-width: 400px;
-  background-color: var(--color-bg); /* Background color */
+  background-color: var(--color-bg);
+  /* Background color */
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for a bit of depth */
-  transition: transform 1s ease-in-out; /* Transition for smooth sliding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Shadow for a bit of depth */
+  transition: transform 1s ease-in-out;
+  /* Transition for smooth sliding */
   overflow-y: auto;
   /* Add other styling properties as needed */
 }
+
 .cart-items {
   display: flex;
   flex-direction: column;
   padding: 5px 5px;
 }
+
 /* CSS styles for the cart item */
 .cart-item {
   display: flex;
@@ -183,15 +192,18 @@ i.fa-user {
   padding: 10px;
   margin-top: 10px;
 }
-.order-item{
+
+.order-item {
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin-top: 1rem;
 }
+
 /* CSS styles for the cart image */
 .cart-img {
-  width: 100px; /* Adjust width as needed */
+  width: 100px;
+  /* Adjust width as needed */
   height: auto;
   border-radius: 50px;
 }
@@ -214,8 +226,10 @@ i.fa-user {
 
 
 .cart-panel.show {
-  transform: translateX(-100%); /* Slide in from the right */
+  transform: translateX(-100%);
+  /* Slide in from the right */
 }
+
 .log-out {
   width: 100px;
   font-size: 15px;
@@ -223,6 +237,7 @@ i.fa-user {
   margin-top: 50vh;
   margin-left: 10px;
 }
+
 .navbar {
   background-color: var(--color-bg);
   padding: 20px;
@@ -469,6 +484,7 @@ main {
   border-radius: 10px;
   overflow-y: auto;
 }
+
 .main-comment {
   width: 100%;
   max-width: 600px;
@@ -476,6 +492,7 @@ main {
   background-color: var(--color-comment);
   border-radius: 10px;
 }
+
 .main-comment img {
   width: 100px;
   height: 100px;
@@ -523,7 +540,7 @@ main {
   border-radius: 10px;
 }
 
-.company .flexcol > * {
+.company .flexcol>* {
   margin-bottom: 10px;
 }
 
@@ -540,7 +557,7 @@ footer {
   justify-content: space-between;
 }
 
-footer > * {
+footer>* {
   margin: 0 5%;
 }
 
@@ -621,7 +638,7 @@ footer > * {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-#leftside-navigation ul li.active > a {
+#leftside-navigation ul li.active>a {
   transition: all 1s ease;
   color: var(--color-footer-bg);
 }
@@ -735,14 +752,18 @@ main {
   z-index: 100;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-  transition: transform 0.3s ease, opacity 0.3s ease; /* transition */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* transition */
   transform: translateX(320px);
-  opacity: 0; /* paneliig hidelah uuuregtei*/
+  opacity: 0;
+  /* paneliig hidelah uuuregtei*/
 }
 
 #loginPanel.show {
-  transform: translateX(0); /* Slide in animation */
-  opacity: 1; /* Fade in animation */
+  transform: translateX(0);
+  /* Slide in animation */
+  opacity: 1;
+  /* Fade in animation */
 }
 
 i.fa-solid.fa-x {
@@ -809,17 +830,22 @@ button[type="submit"]:hover {
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
+
 .give-comment input {
   width: 300px;
   height: 200px;
 }
+
 .give-comment button {
   font-size: 18px;
   height: 50px;
 }
+
 .give-comment.show {
-  transform: translateX(1); /* Slide in animation */
-  opacity: 1; /* Fade in animation */
+  transform: translateX(1);
+  /* Slide in animation */
+  opacity: 1;
+  /* Fade in animation */
 }
 
 .comment-header {
@@ -827,12 +853,15 @@ button[type="submit"]:hover {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .comment-header i.fa-solid.fa-x {
   padding-top: -10px;
 }
+
 .give-comment .fa-star {
   color: gray;
 }
+
 .give-comment .fa-star.active {
   color: var(--color-footer-bg);
   background-color: var(--color-comment);
@@ -972,6 +1001,7 @@ button[type="submit"]:hover {
 }
 
 @media (min-width: 1024px) {
+
   /* Navbar */
   .navbar .nav-links li {
     margin-right: 70px;
@@ -1040,33 +1070,43 @@ button[type="submit"]:hover {
     font-weight: 500;
   }
 }
+
 /*animation*/
 @keyframes slideInLeft {
   from {
-    transform: translateX(-100%); /* Start off the screen on the left */
+    transform: translateX(-100%);
+    /* Start off the screen on the left */
   }
+
   to {
-    transform: translateX(0); /* Slide in to the original position */
+    transform: translateX(0);
+    /* Slide in to the original position */
   }
 }
 
 @keyframes slideInRight {
   from {
-    transform: translateX(100%); /* Start off the screen on the right */
+    transform: translateX(100%);
+    /* Start off the screen on the right */
   }
+
   to {
-    transform: translateX(0); /* Slide in to the original position */
+    transform: translateX(0);
+    /* Slide in to the original position */
   }
 }
 
 .left-comment {
-  animation: slideInLeft 5s ease-in-out; /* Apply slideInLeft animation */
+  animation: slideInLeft 5s ease-in-out;
+  /* Apply slideInLeft animation */
 }
 
 .right-comment {
-  animation: slideInRight 5s ease-in-out; /* Apply slideInRight animation */
+  animation: slideInRight 5s ease-in-out;
+  /* Apply slideInRight animation */
 }
-@media(prefers-color-scheme:dark){
+
+/* @media(prefers-color-scheme:dark){
   body{
     background-color: var(--color-dark);
     color: white;
@@ -1129,4 +1169,4 @@ button[type="submit"]:hover {
     background-color: var(--color-dark);
     box-shadow: 0 0 10px rgb(255, 255, 255)
   }
-}
+} */
